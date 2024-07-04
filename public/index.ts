@@ -663,17 +663,18 @@ export const servicesNavigation: servicesNavigation[] = [
     title: "Web Development",
     path: "/services/web-development",
   },
+
   {
     id: 3,
-    image: servicedesign,
-    title: "Graphic Designing",
-    path: "/services/graphic-design",
+    image: servicesass,
+    title: "SaaS Building",
+    path: "/services/saas-development",
   },
   {
     id: 4,
-    image: servicesass,
-    title: "SaaS Building",
-    path: "/services/sass-development",
+    image: servicedesign,
+    title: "Graphic Designing",
+    path: "/services/graphics-design",
   },
   {
     id: 5,
@@ -801,7 +802,7 @@ export interface WebServiceSection {
 
 export const webServiceArray: WebServiceSection[] = [
   {
-    headerSection: "Introduction",
+    headerSection: "Web Development",
     headerContent:
       "In today's digital age, having a strong online presence is crucial. This guide provides an overview of web development, highlighting its importance and key aspects.",
   },
@@ -872,7 +873,7 @@ export const webServiceArray: WebServiceSection[] = [
 
 export const saasDevelopmentPlatformContent = [
   {
-    section: "Introduction",
+    section: "SaaS App Development",
     content:
       "Welcome to our SaaS development platform! We offer tools and services to help businesses build, deploy, and manage software applications in the cloud. Accelerate development, reduce costs, and scale effortlessly with our platform.",
   },
