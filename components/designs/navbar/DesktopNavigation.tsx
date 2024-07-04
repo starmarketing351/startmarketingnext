@@ -59,7 +59,7 @@ const DesktopNavigationDropdown: React.FC<DesktopNavigationDropdownProps> = ({
                     className="rounded-lg"
                   />
                   <div>
-                    <h4 className="text-xl font-bold mb-2 text-blue-800">
+                    <h4 className="text-xl font-bold mb-2 text-white">
                       {title}
                     </h4>
                     <p className="text-gray-600">{title}</p>
@@ -93,7 +93,7 @@ const DesktopNavigationDropdown: React.FC<DesktopNavigationDropdownProps> = ({
                       className="rounded-lg"
                     />
                   </div>
-                  <h4 className="text-xl font-bold mb-2 text-blue-800">
+                  <h4 className="text-xl font-bold mb-2 text-white">
                     {name}
                   </h4>
                   <p className="text-gray-600">{description}</p>

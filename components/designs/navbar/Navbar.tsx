@@ -1,7 +1,7 @@
 "use client";
 
 import { Logo } from "@/public";
-import { MenuIcon, X, HomeIcon, InfoIcon, PhoneIcon, SettingsIcon, ChevronDownIcon } from "lucide-react";
+import { MenuIcon, X, ChevronDownIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
@@ -11,12 +11,13 @@ import Navigation from "./Navigation";
 import { useRouter } from "next/navigation";
 import DesktopNavigationDropdown from "./DesktopNavigation";
 
-
 interface DesktopNavigationProps {
   setHovered: React.Dispatch<React.SetStateAction<string | null>>;
 }
 
-const DesktopNavigation: React.FC<DesktopNavigationProps> = ({ setHovered }) => {
+const DesktopNavigation: React.FC<DesktopNavigationProps> = ({
+  setHovered,
+}) => {
   const router = useRouter();
 
   const handleNavigation = (path: string) => {
@@ -26,40 +27,38 @@ const DesktopNavigation: React.FC<DesktopNavigationProps> = ({ setHovered }) => 
 
   return (
     <nav className="hidden lg:flex space-x-6">
+      <button
+        className="flex items-center space-x-2 text-white"
+        onClick={() => handleNavigation("/")}
+      >
+        <span>Home</span>
+      </button>
       <div
         className="relative group"
         onMouseEnter={() => setHovered("services")}
         onMouseLeave={() => setHovered(null)}
       >
-        <button className="flex items-center space-x-2 text-gray-700 hover:text-gray-900">
-          <SettingsIcon className="w-5 h-5" />
+        <button className="flex items-center space-x-2 text-white">
           <span>Services</span>
           <ChevronDownIcon className="w-4 h-4" />
         </button>
       </div>
+
       <div
         className="relative group"
         onMouseEnter={() => setHovered("about")}
         onMouseLeave={() => setHovered(null)}
       >
-        <button className="flex items-center space-x-2 text-gray-700 hover:text-gray-900">
-          <InfoIcon className="w-5 h-5" />
+        <button className="flex items-center space-x-2 text-white">
           <span>About</span>
           <ChevronDownIcon className="w-4 h-4" />
         </button>
       </div>
+
       <button
-        className="flex items-center space-x-2 text-gray-700 hover:text-gray-900"
-        onClick={() => handleNavigation("/")}
-      >
-        <HomeIcon className="w-5 h-5" />
-        <span>Home</span>
-      </button>
-      <button
-        className="flex items-center space-x-2 text-gray-700 hover:text-gray-900"
+        className="flex items-center space-x-2 text-white"
         onClick={() => handleNavigation("/contact")}
       >
-        <PhoneIcon className="w-5 h-5" />
         <span>Contact</span>
       </button>
     </nav>
@@ -107,13 +106,17 @@ const Navbar = () => {
               <Image
                 src={Logo}
                 alt="Logo"
-                className="h-10 w-auto"
+                className="h-10 lg:h-12 w-auto"
                 height={40}
                 width={40}
               />
-              <span className="text-xl font-bold text-gray-800">Star Marketing</span>
+              <span className="text-xl font-bold text-white">
+                Star Marketing
+              </span>
             </Link>
+
             <DesktopNavigation setHovered={setHovered} />
+
             <button
               onClick={toggleMobileNav}
               className="p-2 rounded-full lg:hidden bg-gray-800 text-white hover:bg-gray-700 transition-colors duration-200"
