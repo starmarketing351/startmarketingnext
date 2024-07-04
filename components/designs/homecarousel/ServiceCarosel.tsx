@@ -7,16 +7,18 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { testimonials, ServiceInterface } from "@/public";
+import { testimonials, ServiceInterface, services } from "@/public";
 import { FaQuoteLeft } from "react-icons/fa";
-import { Button } from "../ui/button";
 import { ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
-const TestimonialsCarousel: React.FC = () => {
+export default function ServiceCorousel() {
   return (
     <section className="bg-gray-100 py-12">
       <div className="container mx-auto max-w-7xl px-4">
-        <h2 className="text-3xl font-bold text-center mb-12">Testimonials</h2>
+        <h2 className="text-3xl font-bold text-center mb-12">
+          We Provide Modern Service Solutions 
+        </h2>
         <Carousel
           opts={{
             align: "start",
@@ -25,7 +27,7 @@ const TestimonialsCarousel: React.FC = () => {
           className="w-full"
         >
           <CarouselContent>
-            {testimonials.map((testimonial: ServiceInterface) => (
+            {services.map((testimonial: ServiceInterface) => (
               <CarouselItem
                 key={testimonial.id}
                 className="sm:basis-full md:basis-1/2 lg:basis-1/3"
@@ -39,8 +41,12 @@ const TestimonialsCarousel: React.FC = () => {
                     height={96}
                     className="w-24 h-24 rounded-full mb-4 object-cover"
                   />
-                  <h3 className="text-xl font-semibold mb-2">{testimonial.title}</h3>
-                  <p className="text-gray-700 px-4">{testimonial.description}</p>
+                  <h3 className="text-xl font-semibold mb-2">
+                    {testimonial.title}
+                  </h3>
+                  <p className="text-gray-700 px-4">
+                    {testimonial.description}
+                  </p>
                 </div>
               </CarouselItem>
             ))}
@@ -53,13 +59,11 @@ const TestimonialsCarousel: React.FC = () => {
           </div>
         </Carousel>
         <div className="flex justify-center mt-28">
-        <Button className="flex items-center gap-2">
-          Learn More <ArrowRight className="w-4 h-4" />
-        </Button>
-      </div>
+          <Button className="flex items-center gap-2">
+            Learn More <ArrowRight className="w-4 h-4" />
+          </Button>
+        </div>
       </div>
     </section>
   );
-};
-
-export default TestimonialsCarousel;
+}

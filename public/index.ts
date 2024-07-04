@@ -172,12 +172,17 @@ export const bannerData = {
 };
 
 import { HomeIcon, SettingsIcon, InfoIcon, PhoneIcon } from "lucide-react";
-import { IconType } from "react-icons";
 
 interface LinkInterface {
   title: string;
   path: string;
 }
+
+// Navigation Array and Interface 
+// Navigation Array and Interface 
+// Navigation Array and Interface 
+
+
 
 export interface NavigationProps {
   id: number;
@@ -210,6 +215,18 @@ export const NavLinks: NavigationProps[] = [
   { id: 3, label: "About", path: "/about", icon: InfoIcon },
   { id: 4, label: "Contact", path: "/contact", icon: PhoneIcon },
 ];
+
+
+// Navigation Array and Interface 
+// Navigation Array and Interface 
+// Navigation Array and Interface 
+
+
+
+// Service  Array and Interface 
+// Service  Array and Interface 
+// Service  Array and Interface 
+
 
 export interface ServiceInterface {
   id: number;
@@ -256,6 +273,16 @@ export const services: ServiceInterface[] = [
   },
 ];
 
+// Service  Array and Interface 
+// Service  Array and Interface 
+// Service  Array and Interface 
+
+
+// Awards and Achievment   Array and Interface 
+// Awards and Achievment   Array and Interface 
+// Awards and Achievment   Array and Interface 
+
+
 export const achievementData = [
   { label: "Years in Business", value: "5+" },
   { label: "Solution Experts", value: "850+" },
@@ -263,7 +290,7 @@ export const achievementData = [
   { label: "Offices Worldwide", value: "2" },
 ];
 
-export const achievementContent: ServiceInterface[] = [
+export const AwardsContent: ServiceInterface[] = [
   {
     id: 1,
     image: awardimage1,
@@ -290,6 +317,11 @@ export const achievementContent: ServiceInterface[] = [
   },
 ];
 
+
+// Awards and Achievment   Array and Interface 
+// Awards and Achievment   Array and Interface 
+// Awards and Achievment   Array and Interface 
+
 export interface ContactInfo {
   type: string;
   value: string;
@@ -299,6 +331,10 @@ export interface Link {
   title: string;
   path: string;
 }
+
+//  Footer Service Array and Interface
+//  Footer Service Array and Interface
+//  Footer Service Array and Interface
 
 export interface FooterSection {
   label: string;
@@ -353,43 +389,59 @@ export const footerContent: FooterSection[] = [
   },
 ];
 
+//  Footer Service Array and Interface
+//  Footer Service Array and Interface
+//  Footer Service Array and Interface
+
 // types.ts
-export interface TermsContent {
+import { 
+  FaFileContract, 
+  FaHandshake, 
+  FaLaptopCode, 
+  FaPuzzlePiece, 
+  FaUserShield, 
+  FaUserCog, 
+  FaLink 
+} from "react-icons/fa";
+
+export interface termsOfServiceContentInterface {
   section: string;
   content: string;
   points?: string[];
   note?: string;
+  icon: IconType;
 }
 
-export const termsOfServiceContent: TermsContent[] = [
+export const termsOfServiceContent: termsOfServiceContentInterface[] = [
   {
     section: "Introduction",
-    content:
-      "Welcome to Star Marketing. These Terms of Service ('Terms') govern your use of our website and software development services.",
+    content: "Welcome to Star Marketing. These Terms of Service ('Terms') govern your use of our website and software development services.",
+    icon: FaFileContract
   },
   {
     section: "Acceptance of Terms",
-    content:
-      "By accessing our website and using our services, you agree to these Terms.",
+    content: "By accessing our website and using our services, you agree to these Terms.",
+    icon: FaHandshake
   },
   {
     section: "Description of Service",
-    content:
-      "Star Marketing offers web software development services including Website Development, Web Application Development, Digital Marketing, SEO, and Mobile Application Development.",
+    content: "Star Marketing offers web software development services including Website Development, Web Application Development, Digital Marketing, SEO, and Mobile Application Development.",
+    icon: FaLaptopCode
   },
   {
     section: "New Features",
-    content:
-      "Any new features or tools added to the current service are also subject to these Terms of Service.",
+    content: "Any new features or tools added to the current service are also subject to these Terms of Service.",
+    icon: FaPuzzlePiece
   },
   {
     section: "Privacy Policy",
-    content:
-      "Our Privacy Policy explains how we collect and use your personal data.",
+    content: "Our Privacy Policy explains how we collect and use your personal data.",
+    icon: FaUserShield
   },
   {
     section: "User Obligations",
     content: "Use of the service is subject to compliance with these Terms.",
+    icon: FaUserCog
   },
   {
     section: "Hyperlinking to our Content",
@@ -399,11 +451,13 @@ export const termsOfServiceContent: TermsContent[] = [
       "Search engines",
       "News organizations",
       "Online directory distributors when listing us",
-      "Systemwide Accredited Businesses",
+      "Systemwide Accredited Businesses"
     ],
     note: "Non-profit organizations, charity shopping malls, and charity fundraising groups may not hyperlink to our website.",
-  },
+    icon: FaLink
+  }
 ];
+
 
 export const testimonials: ServiceInterface[] = [
   {
@@ -516,6 +570,170 @@ export const AboutCommits: AboutCommitsInterface[] = [
   },
 ];
 
+export interface industryExperienceInterface {
+  id: number;
+  image: string | StaticImageData;
+  title: string;
+  description: string;
+}
+
+export const industryExperience: industryExperienceInterface[] = [
+  {
+    id: 1,
+    image: indexp1,
+    description:
+      "Extensive teamwork and collaboration experience in diverse environments.",
+    title: "Teamwork Skills",
+  },
+  {
+    id: 2,
+    image: indexp2,
+    description:
+      "In-depth knowledge of industry-specific tools and technologies.",
+    title: "Technical Expertise",
+  },
+  {
+    id: 3,
+    image: indexp3,
+    description:
+      "Proven track record of delivering projects on time and within budget.",
+    title: "Project Management",
+  },
+  {
+    id: 4,
+    image: indexp4,
+    description:
+      "Strong analytical skills with a focus on problem-solving and decision-making.",
+    title: "Analytical Abilities",
+  },
+  {
+    id: 5,
+    image: indexp5,
+    description:
+      "Effective communication skills for interacting with clients and stakeholders.",
+    title: "Communication Skills",
+  },
+  {
+    id: 6,
+    image: indexp6,
+    description:
+      "Adaptability to changing environments and continuous learning mindset.",
+    title: "Adaptability",
+  },
+];
+
+import swhatsapp from "./serviceillustartion/sserviceicons/swhatsapp.jpg";
+import stwitter from "./serviceillustartion/sserviceicons/stwitter2.jpg";
+import slinkdin from "./serviceillustartion/sserviceicons/slinkdin.jpg";
+import sdicord from "./serviceillustartion/sserviceicons/sdiscord.jpg";
+import syoutube from "./serviceillustartion/sserviceicons/syoutube.jpg";
+import ssocial from "./serviceillustartion/sserviceicons/Social.jpg";
+import { IconType } from "react-icons";
+
+export interface aboutNavigationInterface {
+  id: number;
+  name: string;
+  label: StaticImageData | string;
+  description: string;
+  path: string;
+}
+
+export const aboutNavigation: aboutNavigationInterface[] = [
+  {
+    id: 1,
+    name: "Whatsapp",
+    label: swhatsapp,
+    description: "Contact us on WhatsApp",
+    path: "/contact",
+  },
+  {
+    id: 2,
+    name: "Twitter",
+    label: stwitter,
+    description: "Follow us on Twitter",
+    path: "/twitter",
+  },
+  {
+    id: 3,
+    name: "LinkedIn",
+    label: slinkdin,
+    description: "Connect with us on LinkedIn",
+    path: "/linkedin",
+  },
+  {
+    id: 4,
+    name: "Discord",
+    label: sdicord,
+    description: "Join our Discord community",
+    path: "/discord",
+  },
+  {
+    id: 5,
+    name: "YouTube",
+    label: syoutube,
+    description: "Watch our videos on YouTube",
+    path: "/youtube",
+  },
+  {
+    id: 6,
+    name: "Social Media",
+    label: ssocial,
+    description: "Follow us on all social media platforms",
+    path: "/social",
+  },
+];
+
+export interface servicesNavigation {
+  id: number;
+  title: string;
+  image: StaticImageData | string;
+  path: string;
+}
+
+export const servicesNavigation: servicesNavigation[] = [
+  {
+    id: 1,
+    image: serviceapp,
+    title: "App Development",
+    path: "/services/app-development",
+  },
+  {
+    id: 2,
+    image: serviceweb,
+    title: "Web Development",
+    path: "/services/web-development",
+  },
+  {
+    id: 3,
+    image: servicedesign,
+    title: "Graphic Designing",
+    path: "/services/graphic-design",
+  },
+  {
+    id: 4,
+    image: servicesass,
+    title: "SaaS Building",
+    path: "/services/sass-development",
+  },
+  {
+    id: 5,
+    image: servicephtography,
+    path: "/services/social-media-marketing",
+    title: "Social Media Marketing",
+  },
+  {
+    id: 5,
+    image: productphoto1,
+    path: "/services/product-photography",
+    title: "Product Photography",
+  },
+];
+
+//  services Array and Interface
+//  services Array and Interface
+
+// App Service Array
+
 export interface AppBenifitsPoints {
   tag: string;
   content: string;
@@ -603,6 +821,8 @@ export const appServiceArray: AppServiceInterface[] = [
   },
 ];
 
+// Web Service Array
+
 export interface WebBenefitPoint {
   tag: string;
   content: string;
@@ -650,41 +870,7 @@ export const webServiceArray: WebServiceSection[] = [
     headerContent:
       "CMS platforms like WordPress, Joomla, and Drupal offer user-friendly interfaces and pre-built themes, simplifying the web development process for those with limited coding knowledge.",
   },
-  {
-    headerSection: "Mastering Web Development",
-    serviceBenefits: [
-      {
-        section: "Mastering Web Development",
-        benefitPoints: [
-          {
-            tag: "Learn the Basics",
-            content:
-              "Start with HTML, CSS, and JavaScript through online tutorials, coding bootcamps, and courses.",
-          },
-          {
-            tag: "Practice, Practice, Practice",
-            content:
-              "Create personal projects and build websites to apply your knowledge and gain real-world experience.",
-          },
-          {
-            tag: "Stay Updated",
-            content:
-              "Keep up with new technologies and trends by following blogs, attending conferences, and participating in online communities.",
-          },
-          {
-            tag: "Work with Others",
-            content:
-              "Collaborate with developers and designers on open-source projects to expand your skills and network.",
-          },
-          {
-            tag: "Explore Specializations",
-            content:
-              "Consider specializing in areas like web design, e-commerce, or mobile app development to cater to specific market demands.",
-          },
-        ],
-      },
-    ],
-  },
+  
   {
     headerSection: "SEO and Web Development",
     serviceBenefits: [
@@ -722,96 +908,7 @@ export const webServiceArray: WebServiceSection[] = [
   },
 ];
 
-export interface MarketingPoint {
-  tag: string;
-  content: string;
-}
-
-export interface MarketingInterface {
-  section: string;
-  content?: string;
-  points?: MarketingPoint[];
-}
-
-export const starMarketingGraphicContent: MarketingInterface[] = [
-  {
-    section: "Introduction",
-    content:
-      "At Star Marketing, we are your partner for creative graphic design solutions. From logo design to brand identity, we help businesses create memorable and impactful visuals.",
-  },
-  {
-    section: "Logo Design",
-    content:
-      "Our logo design services create memorable brand identities. We work closely with clients to craft logos that reflect their values and resonate with their audience.",
-  },
-  {
-    section: "Packaging Design",
-    content:
-      "Our packaging design services create visually appealing and functional packaging that enhances product appeal. We design packaging that stands out and communicates your brand effectively.",
-  },
-  {
-    section: "Brand Identity",
-    content:
-      "Our brand identity services include logos, color schemes, typography, and imagery to represent your brand's essence. We establish strong, consistent identities that resonate with your audience.",
-  },
-  {
-    section: "What We Offer",
-    points: [
-      {
-        tag: "Professional Logo Design",
-        content: "Crafting logos that make a lasting impression.",
-      },
-      {
-        tag: "Stunning Graphics for Social Media",
-        content: "Creating eye-catching visuals for social platforms.",
-      },
-      {
-        tag: "Eye-Catching Marketing Materials",
-        content: "Designing marketing materials that attract attention.",
-      },
-      {
-        tag: "Custom Illustrations and Artwork",
-        content:
-          "Providing unique illustrations and artwork tailored to your needs.",
-      },
-    ],
-  },
-  {
-    section: "Why Choose Us?",
-    points: [
-      {
-        tag: "Years of Experience",
-        content:
-          "Leveraging years of industry experience for top-notch solutions.",
-      },
-      {
-        tag: "Creative Solutions",
-        content: "Offering tailored creative solutions that fit your brand.",
-      },
-      {
-        tag: "Fast Turnaround",
-        content: "Delivering quick results without compromising quality.",
-      },
-    ],
-  },
-  {
-    section: "How We Work",
-    points: [
-      {
-        tag: "Schedule a Consultation",
-        content: "Book a meeting with our design experts.",
-      },
-      {
-        tag: "Collaborate on Vision",
-        content: "Work together on your vision and goals.",
-      },
-      {
-        tag: "Bring Ideas to Life",
-        content: "Watch as we transform your ideas into reality.",
-      },
-    ],
-  },
-];
+// Saas Service Array
 
 export const saasDevelopmentPlatformContent: MarketingInterface[] = [
   {
@@ -954,161 +1051,102 @@ export const saasDevelopmentPlatformContent: MarketingInterface[] = [
   },
 ];
 
-export interface industryExperienceInterface {
-  id: number;
-  image: string | StaticImageData;
-  title: string;
-  description: string;
-}
+// graphic Content  Serivice  Array
 
-export const industryExperience: industryExperienceInterface[] = [
+export const starMarketingGraphicContent: MarketingInterface[] = [
   {
-    id: 1,
-    image: indexp1,
-    description:
-      "Extensive teamwork and collaboration experience in diverse environments.",
-    title: "Teamwork Skills",
+    section: "Introduction",
+    content:
+      "At Star Marketing, we are your partner for creative graphic design solutions. From logo design to brand identity, we help businesses create memorable and impactful visuals.",
   },
   {
-    id: 2,
-    image: indexp2,
-    description:
-      "In-depth knowledge of industry-specific tools and technologies.",
-    title: "Technical Expertise",
+    section: "Logo Design",
+    content:
+      "Our logo design services create memorable brand identities. We work closely with clients to craft logos that reflect their values and resonate with their audience.",
   },
   {
-    id: 3,
-    image: indexp3,
-    description:
-      "Proven track record of delivering projects on time and within budget.",
-    title: "Project Management",
+    section: "Packaging Design",
+    content:
+      "Our packaging design services create visually appealing and functional packaging that enhances product appeal. We design packaging that stands out and communicates your brand effectively.",
   },
   {
-    id: 4,
-    image: indexp4,
-    description:
-      "Strong analytical skills with a focus on problem-solving and decision-making.",
-    title: "Analytical Abilities",
+    section: "Brand Identity",
+    content:
+      "Our brand identity services include logos, color schemes, typography, and imagery to represent your brand's essence. We establish strong, consistent identities that resonate with your audience.",
   },
   {
-    id: 5,
-    image: indexp5,
-    description:
-      "Effective communication skills for interacting with clients and stakeholders.",
-    title: "Communication Skills",
+    section: "What We Offer",
+    points: [
+      {
+        tag: "Professional Logo Design",
+        content: "Crafting logos that make a lasting impression.",
+      },
+      {
+        tag: "Stunning Graphics for Social Media",
+        content: "Creating eye-catching visuals for social platforms.",
+      },
+      {
+        tag: "Eye-Catching Marketing Materials",
+        content: "Designing marketing materials that attract attention.",
+      },
+      {
+        tag: "Custom Illustrations and Artwork",
+        content:
+          "Providing unique illustrations and artwork tailored to your needs.",
+      },
+    ],
   },
   {
-    id: 6,
-    image: indexp6,
-    description:
-      "Adaptability to changing environments and continuous learning mindset.",
-    title: "Adaptability",
+    section: "Why Choose Us?",
+    points: [
+      {
+        tag: "Years of Experience",
+        content:
+          "Leveraging years of industry experience for top-notch solutions.",
+      },
+      {
+        tag: "Creative Solutions",
+        content: "Offering tailored creative solutions that fit your brand.",
+      },
+      {
+        tag: "Fast Turnaround",
+        content: "Delivering quick results without compromising quality.",
+      },
+    ],
+  },
+  {
+    section: "How We Work",
+    points: [
+      {
+        tag: "Schedule a Consultation",
+        content: "Book a meeting with our design experts.",
+      },
+      {
+        tag: "Collaborate on Vision",
+        content: "Work together on your vision and goals.",
+      },
+      {
+        tag: "Bring Ideas to Life",
+        content: "Watch as we transform your ideas into reality.",
+      },
+    ],
   },
 ];
 
-import swhatsapp from "./serviceillustartion/sserviceicons/swhatsapp.jpg";
-import stwitter from "./serviceillustartion/sserviceicons/stwitter2.jpg";
-import slinkdin from "./serviceillustartion/sserviceicons/slinkdin.jpg";
-import sdicord from "./serviceillustartion/sserviceicons/sdiscord.jpg";
-import syoutube from "./serviceillustartion/sserviceicons/syoutube.jpg";
-import ssocial from "./serviceillustartion/sserviceicons/Social.jpg";
+// Product PhotoGraphy  Service Array
 
-export interface aboutNavigationInterface {
-  id: number;
-  name: string;
-  label: StaticImageData | string;
-  description: string;
-  path: string;
+// Social Marketing Array
+
+export interface MarketingPoint {
+  tag: string;
+  content: string;
 }
 
-export const aboutNavigation: aboutNavigationInterface[] = [
-  {
-    id: 1,
-    name: "Whatsapp",
-    label: swhatsapp,
-    description: "Contact us on WhatsApp",
-    path: "/contact",
-  },
-  {
-    id: 2,
-    name: "Twitter",
-    label: stwitter,
-    description: "Follow us on Twitter",
-    path: "/twitter",
-  },
-  {
-    id: 3,
-    name: "LinkedIn",
-    label: slinkdin,
-    description: "Connect with us on LinkedIn",
-    path: "/linkedin",
-  },
-  {
-    id: 4,
-    name: "Discord",
-    label: sdicord,
-    description: "Join our Discord community",
-    path: "/discord",
-  },
-  {
-    id: 5,
-    name: "YouTube",
-    label: syoutube,
-    description: "Watch our videos on YouTube",
-    path: "/youtube",
-  },
-  {
-    id: 6,
-    name: "Social Media",
-    label: ssocial,
-    description: "Follow us on all social media platforms",
-    path: "/social",
-  },
-];
-
-
-export interface servicesNavigation {
-  id: number;
-  title: string;
-  image: StaticImageData | string;
-  path: string;
+export interface MarketingInterface {
+  section: string;
+  content?: string;
+  points?: MarketingPoint[];
 }
 
-export const servicesNavigation: servicesNavigation[] = [
-  {
-    id: 1,
-    image: serviceapp,
-    title: "App Development",
-    path: "/services/app-development",
-  },
-  {
-    id: 2,
-    image: serviceweb,
-    title: "Web Development",
-    path: "/services/web-development",
-  },
-  {
-    id: 3,
-    image: servicedesign,
-    title: "Graphic Designing",
-    path: "/services/graphic-design",
-  },
-  {
-    id: 4,
-    image: servicesass,
-    title: "SaaS Building",
-    path: "/services/sass-development",
-  },
-  {
-    id: 5,
-    image: servicephtography,
-    path: "/services/social-media-marketing",
-    title: "Social Media Marketing",
-  },
-  {
-    id: 5,
-    image: productphoto1,
-    path: "/services/product-photography",
-    title: "Product Photography",
-  },
-];
+//  services Array and Interface
+//  services Array and Interface

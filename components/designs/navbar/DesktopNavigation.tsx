@@ -5,7 +5,6 @@ import {
   aboutNavigation,
   aboutNavigationInterface,
   servicesNavigation,
-
 } from "@/public";
 
 interface DesktopNavigationDropdownProps {

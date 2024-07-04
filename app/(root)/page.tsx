@@ -1,9 +1,11 @@
+import AwardSection from "@/components/designs/AwardSection";
 import Counter from "@/components/designs/Counter";
 import Hero from "@/components/designs/Hero";
-import IndustryExp from "@/components/designs/IndustryExp";
+import ServiceCorousel from "@/components/designs/homecarousel/ServiceCarosel";
+import TestimonialsCarousel from "@/components/designs/homecarousel/TesimonialsCorousel";
 import IndustryExperienceCarousel from "@/components/designs/motion/FramerCarousel";
 import Partner from "@/components/designs/Partner";
-import Testimonials from "@/components/designs/Testimonials";
+import TermsAndServiceSection from "@/components/designs/TermsAndSevices";
 import React from "react";
 
 const page = () => {
@@ -13,10 +15,12 @@ const page = () => {
         <Hero />
       </section>
       <Counter />
-      <IndustryExperienceCarousel/>
-      <IndustryExp />
+      <IndustryExperienceCarousel />
       <Partner />
-      <Testimonials />
+      <TestimonialsCarousel />
+      <AwardSection />
+      <ServiceCorousel />
+      <TermsAndServiceSection/>
     </section>
   );
 };

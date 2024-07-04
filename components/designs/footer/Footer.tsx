@@ -7,7 +7,7 @@ import { FooterSection, footerContent } from "@/public";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-gray-900 text-white py-8">
+    <footer className="bg-zinc-800 text-white py-8">
       <div className="container mx-auto w-screen max-w-7xl px-4">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
           {footerContent.map((section: FooterSection) => (

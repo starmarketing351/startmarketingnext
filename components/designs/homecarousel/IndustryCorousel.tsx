@@ -11,7 +11,7 @@ import { industryExperience, industryExperienceInterface } from "@/public";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
-export default function IndustryExperienceSection() {
+export default function IndustryExperienceCarousel() {
   return (
     <section className="container relative  justify-center items-center flex flex-col  mx-auto px-4 pt-12 pb-20">
       <h2 className="text-3xl font-bold text-center mb-8">

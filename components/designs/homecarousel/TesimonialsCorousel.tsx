@@ -9,10 +9,10 @@ import {
 } from "@/components/ui/carousel";
 import { testimonials, ServiceInterface } from "@/public";
 import { FaQuoteLeft } from "react-icons/fa";
-import { Button } from "../ui/button";
 import { ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
-const TestimonialsCarousel: React.FC = () => {
+export default function TestimonialsCarousel() {
   return (
     <section className="bg-gray-100 py-12">
       <div className="container mx-auto max-w-7xl px-4">
@@ -39,8 +39,12 @@ const TestimonialsCarousel: React.FC = () => {
                     height={96}
                     className="w-24 h-24 rounded-full mb-4 object-cover"
                   />
-                  <h3 className="text-xl font-semibold mb-2">{testimonial.title}</h3>
-                  <p className="text-gray-700 px-4">{testimonial.description}</p>
+                  <h3 className="text-xl font-semibold mb-2">
+                    {testimonial.title}
+                  </h3>
+                  <p className="text-gray-700 px-4">
+                    {testimonial.description}
+                  </p>
                 </div>
               </CarouselItem>
             ))}
@@ -53,13 +57,11 @@ const TestimonialsCarousel: React.FC = () => {
           </div>
         </Carousel>
         <div className="flex justify-center mt-28">
-        <Button className="flex items-center gap-2">
-          Learn More <ArrowRight className="w-4 h-4" />
-        </Button>
-      </div>
+          <Button className="flex items-center gap-2">
+            Learn More <ArrowRight className="w-4 h-4" />
+          </Button>
+        </div>
       </div>
     </section>
   );
-};
-
-export default TestimonialsCarousel;
+}
