@@ -134,43 +134,42 @@ export {
   serviceweb,
 };
 
+// hero Banner Info
+// hero Banner Info
+
 export const bannerData = {
-  header: "Digital Transformation",
+  header: "Star Marketing ",
   para: "We simplify the digital transformation journeys of businesses through smart and innovative software solutions.",
   services: [
     {
       title: "Web Development",
-      path: "/services/web-development",
       icon: FaCode,
     },
     {
       title: "App Development",
-      path: "/services/app-development",
       icon: FaMobile,
     },
     {
       title: "Social Media Marketing",
-      path: "/services/social-media-marketing",
       icon: FaHashtag,
     },
     {
       title: "Graphics Design",
-      path: "/services/graphics-design",
       icon: FaPaintBrush,
     },
     {
       title: "Product Photography",
-      path: "/services/product-photography",
       icon: FaCamera,
     },
     {
       title: "SaaS Development",
-      path: "/services/saas-development",
       icon: FaCloud,
     },
   ],
 };
 
+// hero Banner Info
+// hero Banner Info
 import { HomeIcon, SettingsIcon, InfoIcon, PhoneIcon } from "lucide-react";
 
 interface LinkInterface {
@@ -178,11 +177,9 @@ interface LinkInterface {
   path: string;
 }
 
-// Navigation Array and Interface 
-// Navigation Array and Interface 
-// Navigation Array and Interface 
-
-
+// Navigation Array and Interface
+// Navigation Array and Interface
+// Navigation Array and Interface
 
 export interface NavigationProps {
   id: number;
@@ -216,17 +213,13 @@ export const NavLinks: NavigationProps[] = [
   { id: 4, label: "Contact", path: "/contact", icon: PhoneIcon },
 ];
 
+// Navigation Array and Interface
+// Navigation Array and Interface
+// Navigation Array and Interface
 
-// Navigation Array and Interface 
-// Navigation Array and Interface 
-// Navigation Array and Interface 
-
-
-
-// Service  Array and Interface 
-// Service  Array and Interface 
-// Service  Array and Interface 
-
+// Service  Array and Interface
+// Service  Array and Interface
+// Service  Array and Interface
 
 export interface ServiceInterface {
   id: number;
@@ -273,15 +266,13 @@ export const services: ServiceInterface[] = [
   },
 ];
 
-// Service  Array and Interface 
-// Service  Array and Interface 
-// Service  Array and Interface 
+// Service  Array and Interface
+// Service  Array and Interface
+// Service  Array and Interface
 
-
-// Awards and Achievment   Array and Interface 
-// Awards and Achievment   Array and Interface 
-// Awards and Achievment   Array and Interface 
-
+// Awards and Achievment   Array and Interface
+// Awards and Achievment   Array and Interface
+// Awards and Achievment   Array and Interface
 
 export const achievementData = [
   { label: "Years in Business", value: "5+" },
@@ -317,10 +308,9 @@ export const AwardsContent: ServiceInterface[] = [
   },
 ];
 
-
-// Awards and Achievment   Array and Interface 
-// Awards and Achievment   Array and Interface 
-// Awards and Achievment   Array and Interface 
+// Awards and Achievment   Array and Interface
+// Awards and Achievment   Array and Interface
+// Awards and Achievment   Array and Interface
 
 export interface ContactInfo {
   type: string;
@@ -394,15 +384,18 @@ export const footerContent: FooterSection[] = [
 //  Footer Service Array and Interface
 
 // types.ts
-import { 
-  FaFileContract, 
-  FaHandshake, 
-  FaLaptopCode, 
-  FaPuzzlePiece, 
-  FaUserShield, 
-  FaUserCog, 
-  FaLink 
+import {
+  FaFileContract,
+  FaHandshake,
+  FaLaptopCode,
+  FaPuzzlePiece,
+  FaUserShield,
+  FaUserCog,
+  FaLink,
 } from "react-icons/fa";
+
+// terms of Service Array
+// terms of Service Array
 
 export interface termsOfServiceContentInterface {
   section: string;
@@ -415,33 +408,38 @@ export interface termsOfServiceContentInterface {
 export const termsOfServiceContent: termsOfServiceContentInterface[] = [
   {
     section: "Introduction",
-    content: "Welcome to Star Marketing. These Terms of Service ('Terms') govern your use of our website and software development services.",
-    icon: FaFileContract
+    content:
+      "Welcome to Star Marketing. These Terms of Service ('Terms') govern your use of our website and software development services.",
+    icon: FaFileContract,
   },
   {
     section: "Acceptance of Terms",
-    content: "By accessing our website and using our services, you agree to these Terms.",
-    icon: FaHandshake
+    content:
+      "By accessing our website and using our services, you agree to these Terms.",
+    icon: FaHandshake,
   },
   {
     section: "Description of Service",
-    content: "Star Marketing offers web software development services including Website Development, Web Application Development, Digital Marketing, SEO, and Mobile Application Development.",
-    icon: FaLaptopCode
+    content:
+      "Star Marketing offers web software development services including Website Development, Web Application Development, Digital Marketing, SEO, and Mobile Application Development.",
+    icon: FaLaptopCode,
   },
   {
     section: "New Features",
-    content: "Any new features or tools added to the current service are also subject to these Terms of Service.",
-    icon: FaPuzzlePiece
+    content:
+      "Any new features or tools added to the current service are also subject to these Terms of Service.",
+    icon: FaPuzzlePiece,
   },
   {
     section: "Privacy Policy",
-    content: "Our Privacy Policy explains how we collect and use your personal data.",
-    icon: FaUserShield
+    content:
+      "Our Privacy Policy explains how we collect and use your personal data.",
+    icon: FaUserShield,
   },
   {
     section: "User Obligations",
     content: "Use of the service is subject to compliance with these Terms.",
-    icon: FaUserCog
+    icon: FaUserCog,
   },
   {
     section: "Hyperlinking to our Content",
@@ -451,13 +449,18 @@ export const termsOfServiceContent: termsOfServiceContentInterface[] = [
       "Search engines",
       "News organizations",
       "Online directory distributors when listing us",
-      "Systemwide Accredited Businesses"
+      "Systemwide Accredited Businesses",
     ],
     note: "Non-profit organizations, charity shopping malls, and charity fundraising groups may not hyperlink to our website.",
-    icon: FaLink
-  }
+    icon: FaLink,
+  },
 ];
 
+// terms of Service Array
+// terms of Service Array
+
+// testimonials array
+// testimonials array
 
 export const testimonials: ServiceInterface[] = [
   {
@@ -505,51 +508,8 @@ export const testimonials: ServiceInterface[] = [
   },
 ];
 
-export interface sections {
-  tag: string;
-  para: string;
-}
-
-export interface SpecialityAbout {
-  heading1: string;
-  heading2: string;
-  sections: sections[];
-}
-
-export const SpecialityAbout: SpecialityAbout[] = [
-  {
-    heading1:
-      "At Star Marketing, we believe that every brand has the potential to shine brilliantly in its own unique way.",
-    heading2:
-      "Founded on the principles of innovation, creativity, and dedication, we've embarked on a mission to help businesses of all sizes reach for the stars and beyond.",
-    sections: [
-      {
-        tag: "Innovative Solutions",
-        para: "At Star Marketing, we don't just follow trends – we set them. Our team is constantly exploring new ideas and technologies to ensure that your brand stays ahead of the curve in a rapidly evolving marketplace.",
-      },
-      {
-        tag: "Tailored Approach",
-        para: "We understand that every brand is unique, which is why we take a personalized approach to every project. From the initial consultation to the final deliverables, we work closely with you to understand your goals and tailor our strategies to meet your specific needs.",
-      },
-      {
-        tag: "Proven Track Record",
-        para: "With years of experience in the industry, we have a proven track record of delivering results for our clients. Whether it's increasing brand awareness, driving website traffic, or boosting sales, we have the expertise and the know-how to make it happen.",
-      },
-      {
-        tag: "Creative Excellence",
-        para: "Creativity is at the heart of everything we do. From captivating visuals to compelling storytelling, we believe in pushing the boundaries of creativity to create unforgettable brand experiences that resonate with your audience.",
-      },
-      {
-        tag: "Transparent Communication",
-        para: "Communication is key to a successful partnership, which is why we prioritize transparency every step of the way. From project timelines to budget considerations, you can trust us to keep you informed and involved throughout the entire process.",
-      },
-      {
-        tag: "Dedicated Support",
-        para: "Our team of dedicated professionals is here to support you every step of the way. Whether you have a question, a concern, or just need some guidance, we're always here to help. Your success is our top priority, and we'll do whatever it takes to ensure that you achieve your goals.",
-      },
-    ],
-  },
-];
+// testimonials array
+// testimonials array
 
 interface AboutCommitsInterface {
   id: number;
@@ -870,7 +830,7 @@ export const webServiceArray: WebServiceSection[] = [
     headerContent:
       "CMS platforms like WordPress, Joomla, and Drupal offer user-friendly interfaces and pre-built themes, simplifying the web development process for those with limited coding knowledge.",
   },
-  
+
   {
     headerSection: "SEO and Web Development",
     serviceBenefits: [
@@ -910,7 +870,7 @@ export const webServiceArray: WebServiceSection[] = [
 
 // Saas Service Array
 
-export const saasDevelopmentPlatformContent: MarketingInterface[] = [
+export const saasDevelopmentPlatformContent = [
   {
     section: "Introduction",
     content:
@@ -1051,102 +1011,200 @@ export const saasDevelopmentPlatformContent: MarketingInterface[] = [
   },
 ];
 
-// graphic Content  Serivice  Array
+// graphic Content Array
+// graphic Content Array
 
-export const starMarketingGraphicContent: MarketingInterface[] = [
+export interface GraphicsDesignContentInterface {
+  section: string;
+  title?: string;
+  content?: string;
+  image?: string;
+  points?: string[];
+}
+
+export const GraphicsDesignArray: GraphicsDesignContentInterface[] = [
   {
-    section: "Introduction",
-    content:
-      "At Star Marketing, we are your partner for creative graphic design solutions. From logo design to brand identity, we help businesses create memorable and impactful visuals.",
+    section: "HeroSection",
+    title: "Star Marketing",
+    content: "Your partner for creative graphics design solutions",
+    image: "/path/to/hero-image.jpg",
   },
   {
-    section: "Logo Design",
+    section: "LogoDesign",
+    title: "Logo Design",
     content:
-      "Our logo design services create memorable brand identities. We work closely with clients to craft logos that reflect their values and resonate with their audience.",
+      "Our logo design services help businesses create memorable and impactful brand identities. We work closely with our clients to understand their vision and create logos that reflect their values and resonate with their target audience.",
+    image: "/path/to/logo-design-image.jpg",
   },
   {
-    section: "Packaging Design",
+    section: "PackagingDesign",
+    title: "Packaging Design",
     content:
-      "Our packaging design services create visually appealing and functional packaging that enhances product appeal. We design packaging that stands out and communicates your brand effectively.",
+      "Our packaging design services focus on creating visually appealing and functional packaging solutions that enhance product appeal and attract consumers. We design packaging that stands out on the shelf and communicates the brand's message effectively.",
+    image: "/path/to/packaging-design-image.jpg",
   },
   {
-    section: "Brand Identity",
+    section: "BrandIdentity",
+    title: "Brand Identity",
     content:
-      "Our brand identity services include logos, color schemes, typography, and imagery to represent your brand's essence. We establish strong, consistent identities that resonate with your audience.",
+      "Our brand identity services encompass creating cohesive visual elements including logos, color schemes, typography, and imagery that represent the essence of a brand. We help businesses establish a strong and consistent brand identity that resonates with their target audience.",
+    image: "/path/to/brand-identity-image.jpg",
   },
   {
-    section: "What We Offer",
+    section: "Conclusion",
+    content:
+      "Looking to elevate your brand's visual identity? Our expert team at Star Marketing is here to make it happen!",
     points: [
-      {
-        tag: "Professional Logo Design",
-        content: "Crafting logos that make a lasting impression.",
-      },
-      {
-        tag: "Stunning Graphics for Social Media",
-        content: "Creating eye-catching visuals for social platforms.",
-      },
-      {
-        tag: "Eye-Catching Marketing Materials",
-        content: "Designing marketing materials that attract attention.",
-      },
-      {
-        tag: "Custom Illustrations and Artwork",
-        content:
-          "Providing unique illustrations and artwork tailored to your needs.",
-      },
+      "Professional logo design",
+      "Stunning graphics for social media",
+      "Eye-catching marketing materials",
+      "Custom illustrations and artwork",
     ],
   },
   {
-    section: "Why Choose Us?",
+    section: "WhyChooseUs",
+    title: "Why Choose Us?",
     points: [
-      {
-        tag: "Years of Experience",
-        content:
-          "Leveraging years of industry experience for top-notch solutions.",
-      },
-      {
-        tag: "Creative Solutions",
-        content: "Offering tailored creative solutions that fit your brand.",
-      },
-      {
-        tag: "Fast Turnaround",
-        content: "Delivering quick results without compromising quality.",
-      },
+      "Years of experience in the industry",
+      "Creative solutions tailored to your brand",
+      "Fast turnaround times without compromising quality",
     ],
   },
   {
-    section: "How We Work",
+    section: "HowWeWork",
+    title: "How We Work",
     points: [
-      {
-        tag: "Schedule a Consultation",
-        content: "Book a meeting with our design experts.",
-      },
-      {
-        tag: "Collaborate on Vision",
-        content: "Work together on your vision and goals.",
-      },
-      {
-        tag: "Bring Ideas to Life",
-        content: "Watch as we transform your ideas into reality.",
-      },
+      "Schedule a consultation with our design experts.",
+      "Collaborate on your vision and goals.",
+      "Sit back and watch as we bring your ideas to life!",
     ],
   },
 ];
 
+// graphic Content Array
+// graphic Content Array
+
+// Marketing  Content Array
+// Marketing  Content Array
+
+export interface MarketingArrayInterface {
+  section: string;
+  title?: string;
+  content?: string;
+  image?: string;
+  points?: string[];
+}
+
+export const MarketingArray: MarketingArrayInterface[] = [
+  {
+    section: "HeroSection",
+    title: "Star Marketing",
+    content: "Your partner for effective social media marketing solutions.",
+  },
+  {
+    section: "BusinessResponsibility",
+    title: "The Importance of Social Media",
+    content:
+      "Running a business is your prime responsibility. With the increase in the number of users hanging out on various social media platforms, businesses can no longer ignore the power of these platforms to reach their customers. But the problem is that most businesses do not have the proper knowledge and the expertise to use these platforms to their full potential.",
+    image: "/path/to/image1.jpg",
+  },
+  {
+    section: "WhySocialMediaMarketing",
+    title: "Why does your business need to have social media marketing?",
+    content:
+      "Social media plays a crucial role in affecting public opinion about your brand. That is why various brands use platforms such as Facebook, Twitter, LinkedIn, Instagram, and Snapchat to enter into an authoritative dialogue with their fans.",
+    image: "/path/to/image2.jpg",
+    points: [
+      "Successful social media marketing campaigns combine incredible storytelling and business communication with the advanced targeting capabilities of social networks to achieve business goals.",
+      "Social media marketing companies develop various strategies that adequately use organic content and paid ads to reach your relevant audience.",
+    ],
+  },
+];
+
+// Marketing  Content Array
+// Marketing  Content Array
+
+// Product PhotoGraphy  Service Array
 // Product PhotoGraphy  Service Array
 
-// Social Marketing Array
+// Product PhotoGraphy  Service Array
+// Product PhotoGraphy  Service Array
 
-export interface MarketingPoint {
-  tag: string;
-  content: string;
-}
+import p1 from "./productphotography/productphotogray1.jpg";
+import p2 from "./productphotography/productphotogray2.jpg";
+import p3 from "./productphotography/productphotogray3.jpg";
+import p4 from "./productphotography/productphotogray4.jpg";
+import p5 from "./productphotography/productphotogray5.jpg";
+import p6 from "./productphotography/productphotogray6.jpg";
+import ppbanner from "./productphotography/productphotographybanner.jpg";
 
-export interface MarketingInterface {
+export interface ProductPhotographyContentInterface {
   section: string;
+  title?: string;
   content?: string;
-  points?: MarketingPoint[];
+  image?: string | StaticImageData;
+  points?: string | StaticImageData[];
 }
+
+export const ProductPhotographyArray: ProductPhotographyContentInterface[] = [
+  {
+    section: "HeroSection",
+    title: "Star Product Photography",
+    content:
+      "Capture the essence of your products with our professional photography services.",
+    image: ppbanner,
+  },
+  {
+    section: "ExploreDetail",
+    title: "Explore Exquisite Detail",
+    content:
+      "Our photo shoot captures the intricate details and luxurious craftsmanship of all types of products. From the fine stitching to the premium materials used, every aspect is meticulously crafted to ensure quality and durability.",
+    image: "/path/to/detail-image.jpg",
+  },
+  {
+    section: "Versatility",
+    title: "Unmatched Versatility",
+    content:
+      "Whether you're stepping into the boardroom or attending a special event, all types of products effortlessly complement any occasion. With its timeless design and versatile appeal, it's the perfect addition to your wardrobe.",
+    image: "/path/to/versatility-image.jpg",
+  },
+  {
+    section: "ExperienceLuxury",
+    title: "Experience Luxury, Feel Confidence",
+    content:
+      "Indulge in luxury with all types of products. As you browse through our stunning images, envision yourself adorned in elegance and sophistication. With all types of products, confidence becomes your ultimate accessory.",
+    image: "/path/to/luxury-image.jpg",
+  },
+  {
+    section: "ShopCollection",
+    title: "Shop the Collection",
+    content:
+      "Ready to elevate your style? Explore our collection of [Product Name] and discover the perfect pieces to enhance your wardrobe. Click 'Buy Now' to make these exquisite items yours today.",
+    image: "/path/to/collection-image.jpg",
+  },
+  {
+    section: "Gallery",
+    title: "Gallery",
+    content:
+      "From sleek silhouettes to intricate details, our gallery invites you to immerse yourself in luxury. Witness the exquisite craftsmanship and premium materials that define our products.",
+    image: "/path/to/gallery-image1.jpg",
+    points: [p1, p2, p3, p4, p5, p6],
+  },
+  {
+    section: "ProductPackaging",
+    title: "Product Packaging",
+    content:
+      "At Star Marketing, we believe that every product deserves packaging as unique and captivating as the product itself. With our passion for design and commitment to excellence, we specialize in creating bespoke packaging solutions that make your products stand out on the shelf and leave a lasting impression on your customers.",
+    image: "/path/to/packaging-image.jpg",
+  },
+  {
+    section: "CreativeDesign",
+    title: "Creative Design",
+    content:
+      "Our team of experienced designers combines creativity with technical expertise to bring your vision to life. Whether you're looking for sleek and modern packaging or something whimsical and playful, we'll work with you to create a design that captures the essence of your brand and resonates with your customers.",
+    image: "/path/to/creative-design-image.jpg",
+  },
+];
 
 //  services Array and Interface
 //  services Array and Interface
