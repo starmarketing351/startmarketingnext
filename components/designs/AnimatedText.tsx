@@ -7,7 +7,6 @@ import { bannerData } from "@/public";
 
 interface Service {
   title: string;
-  path: string;
   icon: IconType;
 }
 
@@ -63,14 +62,13 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({ services }) => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        transition={{ duration: 0.5,  }}
+        transition={{ duration: 0.5 }}
       >
         <Icon className="text-2xl sm:text-5xl lg:text-6xl" />
       </motion.div>
       <motion.span
         className="text-xl sm:text-4xl lg:text-5xl font-bold"
         key={text}
-        
       >
         {text}
         <motion.span
@@ -91,7 +89,7 @@ const AnimatedTextSection = () => {
       className="relative z-10 h-full flex flex-col justify-center items-center text-white px-4 sm:px-6 lg:px-8"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: .3, delay:1 }} // Increased from 1 to 1.5
+      transition={{ duration: 0.3, delay: 1 }} // Increased from 1 to 1.5
     >
       <div className="max-w-3xl mx-auto text-center">
         <motion.h1
