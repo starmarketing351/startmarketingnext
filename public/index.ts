@@ -689,6 +689,59 @@ export const servicesNavigation: servicesNavigation[] = [
     title: "Product Photography",
   },
 ];
+export interface AboutUsContentInterface {
+  section: string;
+  title?: string;
+  content?: string;
+  points?: string[];
+}
+
+export const AboutUsContent: AboutUsContentInterface[] = [
+  {
+    section: "HeroSection",
+    title: "About Us",
+    content:
+      "Accelerating your digital experience with path-breaking innovations",
+  },
+  {
+    section: "Mission",
+    title: "Our Mission",
+    content:
+      "At Star Marketing, we believe that every brand has the potential to shine brilliantly in its own unique way. Founded on the principles of innovation, creativity, and dedication, we've embarked on a mission to help businesses of all sizes reach for the stars and beyond.",
+  },
+  {
+    section: "Craftsmanship",
+    title: "High-Quality Craftsmanship",
+    content:
+      "We are redefining the path of your growth with high-quality craftsmanship by leveraging disruptive technologies.",
+  },
+  {
+    section: "InnovativeSolutions",
+    title: "Innovative Solutions",
+    content:
+      "Innovative Solutions: At Star Marketing, we don't just follow trends – we set them. Our team is constantly exploring new ideas and technologies to ensure that your brand stays ahead of the curve in a rapidly evolving marketplace.",
+  },
+  {
+    section: "TailoredApproach",
+    title: "Tailored Approach",
+    content:
+      "We understand that every brand is unique, which is why we take a personalized approach to every project. From the initial consultation to the final deliverables, we work closely with you to understand your goals and tailor our strategies to meet your specific needs.",
+  },
+  {
+    section: "Points",
+    title: "Key Points",
+    points: [
+      "Proven track record of delivering results for clients",
+      "Creativity at the heart of everything we do",
+      "Transparent communication throughout the process",
+      "Dedicated support from our professional team",
+      "Years of experience in the industry",
+      "Fast turnaround times without compromising quality",
+    ],
+  },
+];
+
+
 
 //  services Array and Interface
 //  services Array and Interface
@@ -1019,37 +1072,39 @@ export interface GraphicsDesignContentInterface {
   section: string;
   title?: string;
   content?: string;
-  image?: string;
+  image?: string | StaticImageData;
   points?: string[];
 }
-
+import LogoDesigner from "./serviceillustartion/graphic/logoDesigner.webp"
+import Packaging from "./serviceillustartion/graphic/packgingdesign.jpg"
+import brandidentity from "./serviceillustartion/graphic/brandIdentity.jpg"
 export const GraphicsDesignArray: GraphicsDesignContentInterface[] = [
   {
     section: "HeroSection",
     title: "Star Marketing",
     content: "Your partner for creative graphics design solutions",
-    image: "/path/to/hero-image.jpg",
+    image: servicedesign,
   },
   {
     section: "LogoDesign",
     title: "Logo Design",
     content:
       "Our logo design services help businesses create memorable and impactful brand identities. We work closely with our clients to understand their vision and create logos that reflect their values and resonate with their target audience.",
-    image: "/path/to/logo-design-image.jpg",
+    image: LogoDesigner,
   },
   {
     section: "PackagingDesign",
     title: "Packaging Design",
     content:
       "Our packaging design services focus on creating visually appealing and functional packaging solutions that enhance product appeal and attract consumers. We design packaging that stands out on the shelf and communicates the brand's message effectively.",
-    image: "/path/to/packaging-design-image.jpg",
+    image: Packaging,
   },
   {
     section: "BrandIdentity",
     title: "Brand Identity",
     content:
       "Our brand identity services encompass creating cohesive visual elements including logos, color schemes, typography, and imagery that represent the essence of a brand. We help businesses establish a strong and consistent brand identity that resonates with their target audience.",
-    image: "/path/to/brand-identity-image.jpg",
+    image: brandidentity,
   },
   {
     section: "Conclusion",
@@ -1092,14 +1147,17 @@ export interface MarketingArrayInterface {
   section: string;
   title?: string;
   content?: string;
-  image?: string;
+  image?: string | StaticImageData;
   points?: string[];
 }
+import whysocialmedia from "./serviceillustartion/socialmediawhy.jpg"
+import socialmediaimportance from "./serviceillustartion/socialmediaimportance.jpg"
 
 export const MarketingArray: MarketingArrayInterface[] = [
   {
     section: "HeroSection",
     title: "Star Marketing",
+    image:serviceapp, 
     content: "Your partner for effective social media marketing solutions.",
   },
   {
@@ -1107,14 +1165,14 @@ export const MarketingArray: MarketingArrayInterface[] = [
     title: "The Importance of Social Media",
     content:
       "Running a business is your prime responsibility. With the increase in the number of users hanging out on various social media platforms, businesses can no longer ignore the power of these platforms to reach their customers. But the problem is that most businesses do not have the proper knowledge and the expertise to use these platforms to their full potential.",
-    image: "/path/to/image1.jpg",
+    image: socialmediaimportance,
   },
   {
     section: "WhySocialMediaMarketing",
     title: "Why does your business need to have social media marketing?",
     content:
       "Social media plays a crucial role in affecting public opinion about your brand. That is why various brands use platforms such as Facebook, Twitter, LinkedIn, Instagram, and Snapchat to enter into an authoritative dialogue with their fans.",
-    image: "/path/to/image2.jpg",
+    image:whysocialmedia ,
     points: [
       "Successful social media marketing campaigns combine incredible storytelling and business communication with the advanced targeting capabilities of social networks to achieve business goals.",
       "Social media marketing companies develop various strategies that adequately use organic content and paid ads to reach your relevant audience.",
@@ -1144,7 +1202,7 @@ export interface ProductPhotographyContentInterface {
   title?: string;
   content?: string;
   image?: string | StaticImageData;
-  points?: string | StaticImageData[];
+  points?:  StaticImageData[];
 }
 
 export const ProductPhotographyArray: ProductPhotographyContentInterface[] = [
@@ -1160,28 +1218,28 @@ export const ProductPhotographyArray: ProductPhotographyContentInterface[] = [
     title: "Explore Exquisite Detail",
     content:
       "Our photo shoot captures the intricate details and luxurious craftsmanship of all types of products. From the fine stitching to the premium materials used, every aspect is meticulously crafted to ensure quality and durability.",
-    image: "/path/to/detail-image.jpg",
+    image: p1,
   },
   {
     section: "Versatility",
     title: "Unmatched Versatility",
     content:
       "Whether you're stepping into the boardroom or attending a special event, all types of products effortlessly complement any occasion. With its timeless design and versatile appeal, it's the perfect addition to your wardrobe.",
-    image: "/path/to/versatility-image.jpg",
+    image: p2,
   },
   {
     section: "ExperienceLuxury",
     title: "Experience Luxury, Feel Confidence",
     content:
       "Indulge in luxury with all types of products. As you browse through our stunning images, envision yourself adorned in elegance and sophistication. With all types of products, confidence becomes your ultimate accessory.",
-    image: "/path/to/luxury-image.jpg",
+    image:p3,
   },
   {
     section: "ShopCollection",
     title: "Shop the Collection",
     content:
       "Ready to elevate your style? Explore our collection of [Product Name] and discover the perfect pieces to enhance your wardrobe. Click 'Buy Now' to make these exquisite items yours today.",
-    image: "/path/to/collection-image.jpg",
+    image: p4,
   },
   {
     section: "Gallery",
@@ -1196,14 +1254,14 @@ export const ProductPhotographyArray: ProductPhotographyContentInterface[] = [
     title: "Product Packaging",
     content:
       "At Star Marketing, we believe that every product deserves packaging as unique and captivating as the product itself. With our passion for design and commitment to excellence, we specialize in creating bespoke packaging solutions that make your products stand out on the shelf and leave a lasting impression on your customers.",
-    image: "/path/to/packaging-image.jpg",
+    image: p5,
   },
   {
     section: "CreativeDesign",
     title: "Creative Design",
     content:
       "Our team of experienced designers combines creativity with technical expertise to bring your vision to life. Whether you're looking for sleek and modern packaging or something whimsical and playful, we'll work with you to create a design that captures the essence of your brand and resonates with your customers.",
-    image: "/path/to/creative-design-image.jpg",
+    image: p6,
   },
 ];
 
