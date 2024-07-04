@@ -5,7 +5,7 @@ import { usePathname, useRouter } from "next/navigation";
 import React, { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import { AnimationVisible } from "../motion/AnimationHeight";
-import SocialIcon from "./SocialIcon";
+import SocialIcon, { SocialIconInterface, socialIcons } from "./SocialIcon";
 // Update this import path as needed
 
 interface NavigationComponentProps {
@@ -78,8 +78,18 @@ const Navigation = ({ isOpen, setIsOpen }: NavigationComponentProps) => {
         </div>
       ))}
 
-      <div className="border-2 w-full h-14 py-2">
-        <SocialIcon/>
+      <div className="border-2 border-black/20 rounded-md w-full h-14 py-2">
+        <div className="  grid grid-cols-4 items-center h-full">
+          {socialIcons.map(
+            ({ icon: Icon, link, name }: SocialIconInterface) => {
+              return (
+                <div key={name} className="flex items-center justify-center">
+                  <Icon size={22} className="" />
+                </div>
+              );
+            }
+          )}
+        </div>
       </div>
     </nav>
   );

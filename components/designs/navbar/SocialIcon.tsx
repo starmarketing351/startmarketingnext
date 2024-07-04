@@ -2,13 +2,13 @@ import React from "react";
 import { FaInstagram, FaLinkedin, FaWhatsapp, FaYoutube } from "react-icons/fa";
 import { IconType } from "react-icons/lib";
 
-interface SocialIcon {
+export interface SocialIconInterface {
   name: string;
   icon: IconType;
   link: string;
 }
 
-const socialIcons: SocialIcon[] = [
+export const socialIcons: SocialIconInterface[] = [
   {
     name: "Instagram",
     icon: FaInstagram,
@@ -34,20 +34,9 @@ const socialIcons: SocialIcon[] = [
 
 const SocialIcon = () => {
   return (
-    <div className="flexr-center hidden lg:flex gap-x-2 px-3 ">
-      {socialIcons.map((socialIcon) => {
-        const Icon = socialIcon.icon
-        return (
-            <a
-            key={socialIcon.name}
-            href={socialIcon.link}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Icon className="" fill="black" size={22} startOffset="2"   />
-          </a>
-        )
-      })}
+    <div className="flexr-center hidden bg-red-400 text-black lg:flex gap-x-2 px-3 ">
+     
+    hello
     </div>
   );
 };

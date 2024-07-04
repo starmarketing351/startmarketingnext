@@ -349,7 +349,7 @@ export const footerContent: FooterSection[] = [
   },
   {
     label: "Copyright",
-    text: "© 2023 Star Marketing",
+    text: "© 2022 Star Marketing",
   },
 ];
 
@@ -1077,38 +1077,38 @@ export interface servicesNavigation {
 export const servicesNavigation: servicesNavigation[] = [
   {
     id: 1,
-    image: serviceweb,
-    title: "Web Development",
+    image: serviceapp,
+    title: "App Development",
     path: "/services/app-development",
   },
   {
     id: 2,
-    image: serviceapp,
-    title: "",
+    image: serviceweb,
+    title: "Web Development",
     path: "/services/web-development",
   },
   {
     id: 3,
     image: servicedesign,
-    title: "Digital Marketing",
+    title: "Graphic Designing",
     path: "/services/graphic-design",
   },
   {
     id: 4,
     image: servicesass,
-    title: "Digital Marketing",
+    title: "SaaS Building",
     path: "/services/sass-development",
   },
   {
     id: 5,
     image: servicephtography,
     path: "/services/social-media-marketing",
-    title: "Digital Marketing",
+    title: "Social Media Marketing",
   },
   {
     id: 5,
     image: productphoto1,
     path: "/services/product-photography",
-    title: "Digital Marketing",
+    title: "Product Photography",
   },
 ];

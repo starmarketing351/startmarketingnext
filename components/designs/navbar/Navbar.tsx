@@ -111,7 +111,7 @@ const Navbar = () => {
                 height={40}
                 width={40}
               />
-              <span className="text-xl font-bold text-gray-800">Team Hope</span>
+              <span className="text-xl font-bold text-gray-800">Star Marketing</span>
             </Link>
             <DesktopNavigation setHovered={setHovered} />
             <button
