@@ -16,7 +16,7 @@ export default function AwardSection() {
         {AwardsContent.map(
           ({ description, id, image, title }: ServiceInterface) => {
             return (
-              <div>
+              <div key={id}>
                 <div
                   key={id}
                   className="rounded-lg overflow-hidden text-center"

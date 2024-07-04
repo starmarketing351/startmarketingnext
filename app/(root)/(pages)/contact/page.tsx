@@ -12,7 +12,7 @@ const AboutUsSection = () => {
         
         <div className="bg-white text-blue-900 p-8 rounded-lg shadow-lg">
           <p className="mb-6 text-lg">
-            At Star Marketing, we believe that every brand has the potential to shine brilliantly in its own unique way. Founded on the principles of innovation, creativity, and dedication, we've embarked on a mission to help businesses of all sizes reach for the stars and beyond.
+            At Star Marketing, we believe that every brand has the potential to shine brilliantly in its own unique way. Founded on the principles of innovation, creativity, and dedication, we ve embarked on a mission to help businesses of all sizes reach for the stars and beyond.
           </p>
           <p className="mb-6 text-lg">
             We are redefining the path of your growth with high-quality craftsmanship by leveraging disruptive technologies.
