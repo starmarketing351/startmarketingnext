@@ -8,6 +8,7 @@ import {
   FaWhatsapp,
 } from "react-icons/fa";
 import Link from "next/link";
+import HeroBanner from "@/components/designs/HeroBanner";
 
 interface ContactCardProps {
   icon: React.ReactNode;
@@ -52,7 +53,7 @@ const ContactCardBox = () => {
         </p>
       </ContactCard>
       <Link href="https://wa.me/message/EZRVDNWS56I3E1">
-        <div  className="flex items-center justify-center">
+        <div className="flex items-center justify-center">
           <ContactCard
             icon={<FaWhatsapp className="text-2xl text-blue-600" />}
             name="WhatsApp"
@@ -68,21 +69,15 @@ const ContactCardBox = () => {
 const page = () => {
   return (
     <section className="bg-gray-100">
-      <div className="w-screen h-[60vh] max-h-[60vh] overflow-hidden">
-        <Image
-          src={Contact}
-          height={1200}
-          width={1200}
-          className="object-cover w-full h-full object-left lg:object-top"
-          alt="Contact"
-        />
-      </div>
+      <HeroBanner
+        imageSrc={Contact}
+        heroHeading="Contact Us"
+        heroPara="React out to us for any inquiries or support We are here to help"
+        buttonText="Visit Home"
+        path="/"
+      />
 
       <div className="flex flex-col items-center">
-        <h1 className="text-3xl font-bold mt-8">Contact Us</h1>
-        <p className="text-lg mt-2 mb-6 text-center px-4">
-          Reach out to us for any inquiries or support. We are here to help!
-        </p>
         <ContactCardBox />
         <div className="w-full h-[400px] rounded-xl px-2 max-w-7xl lg:px-5 md:h-[600px] my-10">
           <iframe

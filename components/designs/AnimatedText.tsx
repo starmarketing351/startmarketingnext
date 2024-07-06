@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { IconType } from "react-icons";
 import { bannerData } from "@/public";
+import Link from "next/link";
 
 interface Service {
   title: string;
@@ -120,9 +121,9 @@ const AnimatedTextSection = () => {
           <button className="bg-transparent border-2 border-white text-white px-6 py-3 rounded-full font-semibold hover:bg-white hover:text-black transition duration-300 ease-in-out">
             See Work
           </button>
-          <button className="bg-white text-black px-6 py-3 rounded-full font-semibold hover:bg-transparent hover:text-white hover:border-white hover:border-2 transition duration-300 ease-in-out">
+          <Link href="/contact" className="bg-white text-black px-6 py-3 rounded-full font-semibold hover:bg-transparent hover:text-white hover:border-white hover:border-2 transition duration-300 ease-in-out">
             Contact Us
-          </button>
+          </Link>
         </div>
       </motion.div>
     </motion.div>

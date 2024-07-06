@@ -229,20 +229,31 @@ export interface ServiceInterface {
   image:  StaticImageData;
   title: string;
   description: string;
+
+}
+export interface ServicenewInterface {
+  id: number;
+  image:  StaticImageData;
+  title: string;
+  description: string;
+  path:string
 }
 
-export const services: ServiceInterface[] = [
+export const services: ServicenewInterface[] = [
   {
     id: 1,
     image: serviceapp,
     title: "Web Development",
+    path:"/services/web-development", 
     description:
       "We create fast, secure, and scalable websites, from corporate sites to e-commerce platforms, using the latest technologies.",
-  },
+  }, 
+
   {
     id: 2,
     image: serviceweb,
-    title: "Mobile Development",
+    title: "App Development",
+    path:"/services/app-development",
     description:
       "High-performance, feature-rich apps for iOS and Android with intuitive user experiences and robust security.",
   },
@@ -250,6 +261,7 @@ export const services: ServiceInterface[] = [
     id: 3,
     image: servicesass,
     title: "Saas Development",
+    path:"/services/saas-development",
     description:
       "Boost your online presence with SEO, social media, content marketing, and PPC campaigns driven by data.",
   },
@@ -257,6 +269,7 @@ export const services: ServiceInterface[] = [
     id: 4,
     image: servicedesign,
     title: "Graphic Design",
+    path:"/services/graphics-design",
     description:
       "Create visually stunning designs that captivate and communicate effectively with your target audience.",
   },
@@ -264,6 +277,7 @@ export const services: ServiceInterface[] = [
     id: 5,
     image: servicephtography,
     title: "Social Marketing",
+    path:"/services/social-media-marketing",
     description:
       "Engage your audience and drive conversions with strategic social media campaigns tailored to your brand.",
   },
@@ -271,6 +285,7 @@ export const services: ServiceInterface[] = [
     id: 6,
     image: productphoto2,
     title: "Product Photography",
+    path:"/services/product-photography",
     description:
       "Showcase your products with high-quality photography that highlights details and elevates your brand.",
   },
@@ -1242,6 +1257,7 @@ import p4 from "./productphotography/productphotogray4.jpg";
 import p5 from "./productphotography/productphotogray5.jpg";
 import p6 from "./productphotography/productphotogray6.jpg";
 import ppbanner from "./productphotography/productphotographybanner.jpg";
+import path from "path";
 
 export interface ProductPhotographyContentInterface {
   section: string;

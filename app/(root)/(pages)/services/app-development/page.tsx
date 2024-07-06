@@ -32,10 +32,10 @@ const AppServiceCard: React.FC = () => {
   return (
     <section className="bg-gray-100 py-12">
       <HeroBanner
-        imageSrc={services[0].image}
+        imageSrc={services[1].image}
         buttonText="Get Started"
-        heroHeading={services[0].title}
-        heroPara={services[0].description}
+        heroHeading={services[1].title}
+        heroPara={services[1].description}
         path="/contact"
       />
 
