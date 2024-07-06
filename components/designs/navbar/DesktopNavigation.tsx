@@ -99,8 +99,8 @@ const DesktopNavigationDropdown: React.FC<DesktopNavigationDropdownProps> = ({
                 )
               )}
             </div>
-            <div>
-              <Link href="/about">About Page</Link>
+            <div className="w-full flex items-start justify-center mx-auto">
+              <Link className="max-w-32 bg-black flex items-center gap-x-2" href="/about">About Page</Link>
             </div>
           </div>
         )}
