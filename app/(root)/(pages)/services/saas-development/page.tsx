@@ -1,7 +1,8 @@
 import React from "react";
-import { saasDevelopmentPlatformContent } from "@/public";
+import { saasDevelopmentPlatformContent, services } from "@/public";
 import Image from "next/image";
 import saas1 from "@/public/serviceillustartion/sass/saas1.jpg";
+import HeroBanner from "@/components/designs/HeroBanner";
 
 const SaasCard: React.FC = () => {
   // Extract the Introduction section from starMarketingGraphicContent
@@ -11,27 +12,13 @@ const SaasCard: React.FC = () => {
 
   return (
     <section className="bg-gray-100 py-12">
-      <div className="relative w-full h-[80vh] overflow-hidden">
-        <div className="absolute inset-0 min-h-full min-w-full bg-black bg-opacity-30"></div>
-        <Image
-          src={saas1}
-          className="min-h-full min-w-full object-cover object-center"
-          alt="Service Header"
-          priority
-        />
-        <div className="absolute inset-0 bg-black opacity-50"></div>
-        <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white p-8">
-          <h1 className="text-5xl font-bold mb-6 animate-fade-in">
-            {introductionSection?.section}
-          </h1>
-          <p className="text-xl max-w-2xl mb-8 animate-fade-in-delay">
-            {introductionSection?.content}
-          </p>
-          <button className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-full transition duration-300 ease-in-out transform hover:scale-105">
-            Get Started
-          </button>
-        </div>
-      </div>
+       <HeroBanner
+        imageSrc={services[2].image}
+        buttonText="Get Started"
+        heroHeading={services[2].title}
+        heroPara={services[2].description}
+        path="/contact"
+      />
 
       {saasDevelopmentPlatformContent.map((section, index) => (
         <div key={index} className="mb-16">

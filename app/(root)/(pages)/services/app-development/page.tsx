@@ -5,8 +5,10 @@ import {
   appimage1,
   appServiceArray,
   AppServiceInterface,
+  services,
   webimage1,
 } from "@/public";
+import HeroBanner from "@/components/designs/HeroBanner";
 
 const AppServiceCard: React.FC = () => {
   const introductionSection = appServiceArray.find(
@@ -24,32 +26,18 @@ const AppServiceCard: React.FC = () => {
         "The Benefits of Mobile-First Web Application Design"
   );
 
+  
+
+
   return (
     <section className="bg-gray-100 py-12">
-      {/* Hero Section */}
-      <div className="relative w-full h-[80vh] overflow-hidden">
-        <div className="size-full">
-          <Image
-            src={appimage1}
-            height={800}
-            width={800}
-            className="object-cover object-center min-h-full min-w-full"
-            alt="Service Header"
-          />
-        </div>
-        <div className="absolute inset-0 min-h-full min-w-full bg-black bg-opacity-60"></div>
-        <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white p-8">
-          <h1 className="text-5xl font-bold mb-6 animate-fade-in">
-            {introductionSection?.headerSection}
-          </h1>
-          <p className="text-xl max-w-2xl mb-8 animate-fade-in-delay">
-            {introductionSection?.headerContent}
-          </p>
-          <button className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-full transition duration-300 ease-in-out transform hover:scale-105">
-            Get Started
-          </button>
-        </div>
-      </div>
+      <HeroBanner
+        imageSrc={services[0].image}
+        buttonText="Get Started"
+        heroHeading={services[0].title}
+        heroPara={services[0].description}
+        path="/contact"
+      />
 
       {/* Main Content */}
       <div className="container mx-auto max-w-5xl px-4 py-12">

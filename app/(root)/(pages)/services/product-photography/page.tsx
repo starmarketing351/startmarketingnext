@@ -2,12 +2,21 @@ import React from "react";
 import {
   ProductPhotographyArray,
   ProductPhotographyContentInterface,
+  services,
 } from "@/public";
 import Image from "next/image";
+import HeroBanner from "@/components/designs/HeroBanner";
 
 const ProductPhotographySection: React.FC = () => {
   return (
     <section className="bg-gray-50 py-12">
+     <HeroBanner
+        imageSrc={services[5].image}
+        buttonText="Get Started"
+        heroHeading={services[5].title}
+        heroPara={services[5].description}
+        path="/contact"
+      />
       <div className="container mx-auto max-w-7xl px-4">
         {ProductPhotographyArray.map(
           (item: ProductPhotographyContentInterface, index) => (

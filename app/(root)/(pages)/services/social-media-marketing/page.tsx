@@ -1,10 +1,18 @@
 import React from 'react';
-import { MarketingArray, MarketingArrayInterface } from '@/public';
+import { MarketingArray, MarketingArrayInterface, services } from '@/public';
 import Image from 'next/image';
+import HeroBanner from '@/components/designs/HeroBanner';
 
 const SocialMarketingSection: React.FC = () => {
   return (
     <section className="bg-gray-50 py-12">
+        <HeroBanner
+        imageSrc={services[4].image}
+        buttonText="Get Started"
+        heroHeading={services[4].title}
+        heroPara={services[4].description}
+        path="/contact"
+      />
       <div className="container mx-auto max-w-7xl px-4">
         {MarketingArray.map((item: MarketingArrayInterface, index) => (
           <div key={index} className="mb-12">

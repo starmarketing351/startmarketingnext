@@ -226,7 +226,7 @@ export const NavLinks: NavigationProps[] = [
 
 export interface ServiceInterface {
   id: number;
-  image: string | StaticImageData;
+  image:  StaticImageData;
   title: string;
   description: string;
 }
@@ -249,7 +249,7 @@ export const services: ServiceInterface[] = [
   {
     id: 3,
     image: servicesass,
-    title: "Digital Marketing",
+    title: "Saas Development",
     description:
       "Boost your online presence with SEO, social media, content marketing, and PPC campaigns driven by data.",
   },
@@ -275,6 +275,8 @@ export const services: ServiceInterface[] = [
       "Showcase your products with high-quality photography that highlights details and elevates your brand.",
   },
 ];
+
+
 
 // Service  Array and Interface
 // Service  Array and Interface
@@ -1069,13 +1071,63 @@ export interface GraphicsDesignContentInterface {
   image?: string | StaticImageData;
   points?: string[];
 }
+
+// Define the HeroBannerItem interface
+interface HeroBannerItem {
+  image: StaticImageData;
+  heading: string ;
+  para: string;
+  path: string;
+}
+
+// Define the structure of the HeroBannerArray
+
+const HeroBannerArray: HeroBannerItem[] = [
+  {
+    image: serviceweb, // replace with the actual path to your image
+    heading: "Web Development",
+    para: "Expert solutions for web development.",
+    path: "/web-development",
+  },
+  {
+    image: serviceweb, // replace with the actual path to your image
+    heading: "Mobile Development",
+    para: "High-performance mobile applications.",
+    path: "/mobile-development",
+  },
+  {
+    image: serviceweb, // replace with the actual path to your image
+    heading: "Mobile Development",
+    para: "High-performance mobile applications.",
+    path: "/mobile-development",
+  },
+  {
+    image: serviceweb, // replace with the actual path to your image
+    heading: "Mobile Development",
+    para: "High-performance mobile applications.",
+    path: "/mobile-development",
+  },
+  {
+    image: serviceweb, // replace with the actual path to your image
+    heading: "Mobile Development",
+    para: "High-performance mobile applications.",
+    path: "/mobile-development",
+  },
+  {
+    image: serviceweb, // replace with the actual path to your image
+    heading: "Mobile Development",
+    para: "High-performance mobile applications.",
+    path: "/mobile-development",
+  },
+];
+
 import LogoDesigner from "./serviceillustartion/graphic/logoDesigner.webp";
 import Packaging from "./serviceillustartion/graphic/packgingdesign.jpg";
 import brandidentity from "./serviceillustartion/graphic/brandIdentity.jpg";
 export const GraphicsDesignArray: GraphicsDesignContentInterface[] = [
   {
     section: "HeroSection",
-    title: "Star Marketing",
+    title: "Graphic Design",
     content: "Your partner for creative graphics design solutions",
     image: servicedesign,
   },

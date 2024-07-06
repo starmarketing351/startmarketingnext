@@ -1,11 +1,27 @@
 import React from "react";
-import { GraphicsDesignArray, GraphicsDesignContentInterface } from "@/public";
+import {
+  GraphicsDesignArray,
+  GraphicsDesignContentInterface,
+  servicedesign,
+  services,
+} from "@/public";
 import Image from "next/image";
+import HeroBanner from "@/components/designs/HeroBanner";
 
 const GraphicsDesignSection: React.FC = () => {
+  const introductionSection = GraphicsDesignArray.find(
+    (section) => section.title === "Graphic Design"
+  );
   return (
     <section className="bg-gray-50 py-12">
       <div className="container mx-auto max-w-7xl px-4">
+      <HeroBanner
+        imageSrc={services[3].image}
+        buttonText="Get Started"
+        heroHeading={services[3].title}
+        heroPara={services[3].description}
+        path="/contact"
+      />
         {GraphicsDesignArray.map(
           (item: GraphicsDesignContentInterface, index) => (
             <div key={index} className="mb-12">
@@ -28,7 +44,7 @@ const GraphicsDesignSection: React.FC = () => {
                 <div className="bg-white p-6 rounded-lg shadow-lg flex flex-col md:flex-row">
                   {item.image && (
                     <div className="md:w-1/2 md:pr-6 mb-4 md:mb-0">
-                      <Image 
+                      <Image
                         src={item.image}
                         height={600}
                         width={600}
