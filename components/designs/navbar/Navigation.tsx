@@ -6,6 +6,7 @@ import React, { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import { AnimationVisible } from "../motion/AnimationHeight";
 import SocialIcon, { SocialIconInterface, socialIcons } from "./SocialIcon";
+import Link from "next/link";
 // Update this import path as needed
 
 interface NavigationComponentProps {
@@ -83,9 +84,9 @@ const Navigation = ({ isOpen, setIsOpen }: NavigationComponentProps) => {
           {socialIcons.map(
             ({ icon: Icon, link, name }: SocialIconInterface) => {
               return (
-                <div key={name} className="flex items-center justify-center">
+                <Link href={link} key={name} className="flex items-center justify-center">
                   <Icon size={22} className="" />
-                </div>
+                </Link>
               );
             }
           )}

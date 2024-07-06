@@ -1,5 +1,5 @@
 import React from "react";
-import { FaInstagram, FaLinkedin, FaWhatsapp, FaYoutube } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaLinkedin, FaWhatsapp, FaYoutube } from "react-icons/fa";
 import { IconType } from "react-icons/lib";
 
 export interface SocialIconInterface {
@@ -12,23 +12,23 @@ export const socialIcons: SocialIconInterface[] = [
   {
     name: "Instagram",
     icon: FaInstagram,
-    link: "https://www.instagram.com",
+    link: "https://www.instagram.com/star_marketings?igsh=MXdiank3MXVhNmZ1bQ==",
   },
   {
     name: "Whatsapp",
     icon: FaWhatsapp,
-    link: "https://www.whatsapp.com",
+    link: "https://wa.me/message/EZRVDNWS56I3E1",
   },
   {
     name: "LinkedIn",
     icon: FaLinkedin,
-    link: "https://www.linkedin.com",
+    link: "https://www.linkedin.com/company/star-marketings/",
   },
 
   {
-    name: "YouTube",
-    icon: FaYoutube,
-    link: "https://www.youtube.com",
+    name: "Facebook",
+    icon: FaFacebook,
+    link: "https://www.facebook.com/Starmarketings9?mibextid=ZbWKwL",
   },
 ];
 
