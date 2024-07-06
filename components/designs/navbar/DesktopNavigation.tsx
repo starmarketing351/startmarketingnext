@@ -75,7 +75,7 @@ const DesktopNavigationDropdown: React.FC<DesktopNavigationDropdownProps> = ({
               ({
                 description,
                 id,
-                label,
+                label:Icon,
                 name,
                 path,
               }: aboutNavigationInterface) => (
@@ -84,19 +84,13 @@ const DesktopNavigationDropdown: React.FC<DesktopNavigationDropdownProps> = ({
                   className="cursor-pointer hover:bg-blue-100/50 p-4 rounded-lg transition-shadow duration-200 shadow-sm hover:shadow-md"
                   onClick={() => handleNavigation(path)}
                 >
-                  <div className="mb-4">
-                    <Image
-                      src={label}
-                      alt={name}
-                      height={80}
-                      width={80}
-                      className="rounded-lg"
-                    />
+                  <div className="mb-4 w-full justify-center items-center flex">
+                    <Icon className="w-8 h-8 text-blue-500" />
                   </div>
-                  <h4 className="text-xl font-bold mb-2 textwhite">
-                    {name}
-                  </h4>
-                  <p className="text-gray-600">{description}</p>
+                 <div className="flex items-center justify-center w-full flex-col">
+                 <h4 className="text-xl font-bold mb-2 textwhite">{name}</h4>
+                 <p className="text-gray-600">{description}</p>
+                 </div>
                 </div>
               )
             )}

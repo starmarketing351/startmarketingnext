@@ -28,7 +28,7 @@ const Navigation = ({ isOpen, setIsOpen }: NavigationComponentProps) => {
   };
 
   return (
-    <nav className="flex flex-col space-y-4">
+    <nav className="flex flex-col text-white space-y-4">
       {NavLinks.map((link) => (
         <div key={link.id} className="relative">
           {link.links ? (
@@ -68,7 +68,7 @@ const Navigation = ({ isOpen, setIsOpen }: NavigationComponentProps) => {
           ) : (
             <button
               onClick={() => handleNavigation(link.path)}
-              className={`text-left ${
+              className={`text-left text-white ${
                 pathname === link.path ? "font-bold" : "font-normal"
               } hover:text-gray-600 transition-colors`}
             >

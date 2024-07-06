@@ -93,6 +93,9 @@ import {
   FaCamera,
   FaCloud,
   FaWhatsapp,
+  FaFacebook,
+  FaLinkedinIn,
+  FaInstagram,
 } from "react-icons/fa";
 
 export {
@@ -231,38 +234,45 @@ export interface ServiceInterface {
 export const services: ServiceInterface[] = [
   {
     id: 1,
-    image: serviceweb,
+    image: serviceapp,
     title: "Web Development",
     description:
-      "Whether you need a corporate website, an e-commerce platform, or a complex web application, our team has the expertise to bring your vision to life. We leverage the latest technologies and best practices to ensure your website is fast, secure, and scalable.",
+      "We create fast, secure, and scalable websites, from corporate sites to e-commerce platforms, using the latest technologies.",
   },
   {
     id: 2,
-    image: serviceapp,
+    image: serviceweb,
     title: "Mobile Development",
     description:
-      "Our mobile development team specializes in creating high-performance, feature-rich mobile applications for both iOS and Android platforms. We ensure your app provides an intuitive user experience, seamless performance, and robust security.",
+      "High-performance, feature-rich apps for iOS and Android with intuitive user experiences and robust security.",
   },
   {
     id: 3,
-    image: servicedesign,
-    title: "Digital Marketing",
-    description:
-      "Our digital marketing services help you reach your target audience effectively through SEO, social media, content marketing, and PPC campaigns. We use data-driven strategies to boost your online presence and drive conversions.",
-  },
-  {
-    id: 4,
     image: servicesass,
     title: "Digital Marketing",
     description:
-      "Our digital marketing services help you reach your target audience effectively through SEO, social media, content marketing, and PPC campaigns. We use data-driven strategies to boost your online presence and drive conversions.",
+      "Boost your online presence with SEO, social media, content marketing, and PPC campaigns driven by data.",
+  },
+  {
+    id: 4,
+    image: servicedesign,
+    title: "Graphic Design",
+    description:
+      "Create visually stunning designs that captivate and communicate effectively with your target audience.",
   },
   {
     id: 5,
     image: servicephtography,
-    title: "Digital Marketing",
+    title: "Social Marketing",
     description:
-      "Our digital marketing services help you reach your target audience effectively through SEO, social media, content marketing, and PPC campaigns. We use data-driven strategies to boost your online presence and drive conversions.",
+      "Engage your audience and drive conversions with strategic social media campaigns tailored to your brand.",
+  },
+  {
+    id: 6,
+    image: productphoto2,
+    title: "Product Photography",
+    description:
+      "Showcase your products with high-quality photography that highlights details and elevates your brand.",
   },
 ];
 
@@ -593,7 +603,7 @@ import { IconType } from "react-icons";
 export interface aboutNavigationInterface {
   id: number;
   name: string;
-  label: StaticImageData | string;
+  label: IconType;
   description: string;
   path: string;
 }
@@ -602,44 +612,30 @@ export const aboutNavigation: aboutNavigationInterface[] = [
   {
     id: 1,
     name: "Whatsapp",
-    label: swhatsapp,
+    label: FaWhatsapp,
     description: "Contact us on WhatsApp",
-    path: "/contact",
+    path: "https://wa.me/message/EZRVDNWS56I3E1",
   },
   {
     id: 2,
-    name: "Twitter",
-    label: stwitter,
+    name: "Facebook",
+    label: FaFacebook,
     description: "Follow us on Twitter",
-    path: "/twitter",
+    path: "https://www.facebook.com/Starmarketings9?mibextid=ZbWKwL",
   },
   {
     id: 3,
     name: "LinkedIn",
-    label: slinkdin,
+    label: FaLinkedinIn,
     description: "Connect with us on LinkedIn",
-    path: "/linkedin",
+    path: "https://www.linkedin.com/company/star-marketings/",
   },
   {
-    id: 4,
-    name: "Discord",
-    label: sdicord,
-    description: "Join our Discord community",
-    path: "/discord",
-  },
-  {
-    id: 5,
-    name: "YouTube",
-    label: syoutube,
-    description: "Watch our videos on YouTube",
-    path: "/youtube",
-  },
-  {
-    id: 6,
-    name: "Social Media",
-    label: ssocial,
-    description: "Follow us on all social media platforms",
-    path: "/social",
+    id: 3,
+    name: "Instagram",
+    label: FaInstagram,
+    description: "Connect with us on LinkedIn",
+    path: "https://www.instagram.com/star_marketings?igsh=MXdiank3MXVhNmZ1bQ==",
   },
 ];
 
@@ -740,8 +736,6 @@ export const AboutUsContent: AboutUsContentInterface[] = [
     ],
   },
 ];
-
-
 
 //  services Array and Interface
 //  services Array and Interface
@@ -1075,9 +1069,9 @@ export interface GraphicsDesignContentInterface {
   image?: string | StaticImageData;
   points?: string[];
 }
-import LogoDesigner from "./serviceillustartion/graphic/logoDesigner.webp"
-import Packaging from "./serviceillustartion/graphic/packgingdesign.jpg"
-import brandidentity from "./serviceillustartion/graphic/brandIdentity.jpg"
+import LogoDesigner from "./serviceillustartion/graphic/logoDesigner.webp";
+import Packaging from "./serviceillustartion/graphic/packgingdesign.jpg";
+import brandidentity from "./serviceillustartion/graphic/brandIdentity.jpg";
 export const GraphicsDesignArray: GraphicsDesignContentInterface[] = [
   {
     section: "HeroSection",
@@ -1150,14 +1144,14 @@ export interface MarketingArrayInterface {
   image?: string | StaticImageData;
   points?: string[];
 }
-import whysocialmedia from "./serviceillustartion/socialmediawhy.jpg"
-import socialmediaimportance from "./serviceillustartion/socialmediaimportance.jpg"
+import whysocialmedia from "./serviceillustartion/socialmediawhy.jpg";
+import socialmediaimportance from "./serviceillustartion/socialmediaimportance.jpg";
 
 export const MarketingArray: MarketingArrayInterface[] = [
   {
     section: "HeroSection",
     title: "Star Marketing",
-    image:serviceapp, 
+    image: serviceapp,
     content: "Your partner for effective social media marketing solutions.",
   },
   {
@@ -1172,7 +1166,7 @@ export const MarketingArray: MarketingArrayInterface[] = [
     title: "Why does your business need to have social media marketing?",
     content:
       "Social media plays a crucial role in affecting public opinion about your brand. That is why various brands use platforms such as Facebook, Twitter, LinkedIn, Instagram, and Snapchat to enter into an authoritative dialogue with their fans.",
-    image:whysocialmedia ,
+    image: whysocialmedia,
     points: [
       "Successful social media marketing campaigns combine incredible storytelling and business communication with the advanced targeting capabilities of social networks to achieve business goals.",
       "Social media marketing companies develop various strategies that adequately use organic content and paid ads to reach your relevant audience.",
@@ -1202,7 +1196,7 @@ export interface ProductPhotographyContentInterface {
   title?: string;
   content?: string;
   image?: string | StaticImageData;
-  points?:  StaticImageData[];
+  points?: StaticImageData[];
 }
 
 export const ProductPhotographyArray: ProductPhotographyContentInterface[] = [
@@ -1232,7 +1226,7 @@ export const ProductPhotographyArray: ProductPhotographyContentInterface[] = [
     title: "Experience Luxury, Feel Confidence",
     content:
       "Indulge in luxury with all types of products. As you browse through our stunning images, envision yourself adorned in elegance and sophistication. With all types of products, confidence becomes your ultimate accessory.",
-    image:p3,
+    image: p3,
   },
   {
     section: "ShopCollection",

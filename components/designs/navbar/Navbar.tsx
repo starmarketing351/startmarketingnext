@@ -98,7 +98,7 @@ const Navbar = () => {
         animate={isOpen ? "open" : "closed"}
         variants={headerVariants}
         transition={{ duration: 0.3, ease: "easeInOut" }}
-        className="fixed w-full z-40 backdrop-blur-md bg-white/10"
+        className="fixed w-full z-40 backdrop-blur-md bg-black/20"
       >
         <div className="flex flex-col">
           <div className="max-w-7xl mx-auto w-full flex items-center justify-between py-4 px-4">
