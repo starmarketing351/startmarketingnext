@@ -6,9 +6,13 @@ export default function AwardSection() {
   return (
     <section className="bg-white py-16 w-screen   ">
       <div className="max-w-7xl w-full flex justify-center mx-auto items-center flex-col">
-      <div>
-        <h1 className="text-xl text-center font-semibold py-6">Our Achivements Tells About us</h1>
-      </div>
+      <div className="text-center mb-8">
+  <h2 className="text-3xl font-bold">Our Achievements</h2>
+  <p className="text-lg mt-2">
+    Explore our accomplishments and what our clients have achieved with us.
+  </p>
+</div>
+
       <div
         id="achievements"
         className=" grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8"

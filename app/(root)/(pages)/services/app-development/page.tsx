@@ -26,9 +26,6 @@ const AppServiceCard: React.FC = () => {
         "The Benefits of Mobile-First Web Application Design"
   );
 
-  
-
-
   return (
     <section className="bg-gray-100 py-12">
       <HeroBanner
@@ -74,16 +71,18 @@ const AppServiceCard: React.FC = () => {
           )}
 
           {/* Other Sections */}
-          {otherSections.map((section, index) => (
-            <div key={index} className="mb-16">
-              <h2 className="text-3xl font-bold mb-6 text-gray-800 border-b pb-2 text-center">
-                {section.headerSection}
-              </h2>
-              <p className="text-gray-700 mb-6 leading-relaxed text-center">
-                {section.headerContent}
-              </p>
-            </div>
-          ))}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {otherSections.map((section, index) => (
+              <div key={index} className="bg-white rounded-lg p-6 shadow-md">
+                <h2 className="text-3xl font-bold mb-6 text-gray-800 border-b pb-2 text-center">
+                  {section.headerSection}
+                </h2>
+                <p className="text-gray-700 leading-relaxed text-center">
+                  {section.headerContent}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

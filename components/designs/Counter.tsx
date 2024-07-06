@@ -1,4 +1,4 @@
-"use client";
+"use client"
 
 import { achievementData } from "@/public";
 import { useEffect, useState, useRef } from "react";
@@ -74,13 +74,26 @@ const Counter: React.FC = () => {
   return (
     <section className="py-20 bg-gray-100">
       <div className="container mx-auto px-4">
-        <motion.h2
+        <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={controls}
-          className="text-3xl font-bold text-center mb-12"
+          className="text-center mb-8"
         >
-          Our Achievements
-        </motion.h2>
+          <motion.h2
+            initial={{ opacity: 0, y: -20 }}
+            animate={controls}
+            className="text-3xl font-bold mb-2"
+          >
+            Our Achievements
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: -20 }}
+            animate={controls}
+            className="text-lg text-gray-600"
+          >
+            Discover our accomplishments over the years.
+          </motion.p>
+        </motion.div>
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 20 }}

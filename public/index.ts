@@ -226,17 +226,16 @@ export const NavLinks: NavigationProps[] = [
 
 export interface ServiceInterface {
   id: number;
-  image:  StaticImageData;
+  image: StaticImageData;
   title: string;
   description: string;
-
 }
 export interface ServicenewInterface {
   id: number;
-  image:  StaticImageData;
+  image: StaticImageData;
   title: string;
   description: string;
-  path:string
+  path: string;
 }
 
 export const services: ServicenewInterface[] = [
@@ -244,16 +243,16 @@ export const services: ServicenewInterface[] = [
     id: 1,
     image: serviceapp,
     title: "Web Development",
-    path:"/services/web-development", 
+    path: "/services/web-development",
     description:
       "We create fast, secure, and scalable websites, from corporate sites to e-commerce platforms, using the latest technologies.",
-  }, 
+  },
 
   {
     id: 2,
     image: serviceweb,
     title: "App Development",
-    path:"/services/app-development",
+    path: "/services/app-development",
     description:
       "High-performance, feature-rich apps for iOS and Android with intuitive user experiences and robust security.",
   },
@@ -261,7 +260,7 @@ export const services: ServicenewInterface[] = [
     id: 3,
     image: servicesass,
     title: "Saas Development",
-    path:"/services/saas-development",
+    path: "/services/saas-development",
     description:
       "Boost your online presence with SEO, social media, content marketing, and PPC campaigns driven by data.",
   },
@@ -269,7 +268,7 @@ export const services: ServicenewInterface[] = [
     id: 4,
     image: servicedesign,
     title: "Graphic Design",
-    path:"/services/graphics-design",
+    path: "/services/graphics-design",
     description:
       "Create visually stunning designs that captivate and communicate effectively with your target audience.",
   },
@@ -277,7 +276,7 @@ export const services: ServicenewInterface[] = [
     id: 5,
     image: servicephtography,
     title: "Social Marketing",
-    path:"/services/social-media-marketing",
+    path: "/services/social-media-marketing",
     description:
       "Engage your audience and drive conversions with strategic social media campaigns tailored to your brand.",
   },
@@ -285,13 +284,11 @@ export const services: ServicenewInterface[] = [
     id: 6,
     image: productphoto2,
     title: "Product Photography",
-    path:"/services/product-photography",
+    path: "/services/product-photography",
     description:
       "Showcase your products with high-quality photography that highlights details and elevates your brand.",
   },
 ];
-
-
 
 // Service  Array and Interface
 // Service  Array and Interface
@@ -866,11 +863,6 @@ export interface WebServiceSection {
 
 export const webServiceArray: WebServiceSection[] = [
   {
-    headerSection: "Web Development",
-    headerContent:
-      "In today's digital age, having a strong online presence is crucial. This guide provides an overview of web development, highlighting its importance and key aspects.",
-  },
-  {
     headerSection: "The Significance of Web Development",
     headerContent:
       "Web development involves designing, building, and maintaining websites to ensure functionality and user-friendliness. Understanding web development is essential for businesses and aspiring developers alike.",
@@ -1090,7 +1082,7 @@ export interface GraphicsDesignContentInterface {
 // Define the HeroBannerItem interface
 interface HeroBannerItem {
   image: StaticImageData;
-  heading: string ;
+  heading: string;
   para: string;
   path: string;
 }

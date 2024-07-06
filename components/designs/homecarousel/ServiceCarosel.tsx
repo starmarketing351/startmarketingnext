@@ -11,14 +11,22 @@ import { testimonials, ServiceInterface, services } from "@/public";
 import { FaQuoteLeft } from "react-icons/fa";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default function ServiceCorousel() {
   return (
     <section className="bg-gray-100 py-12">
       <div className="container mx-auto max-w-7xl px-4">
-        <h2 className="text-3xl font-bold text-center mb-12">
-          We Provide Modern Service Solutions
-        </h2>
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-bold leading-tight">
+            Delivering Modern Service Solutions
+          </h2>
+          <p className="text-lg mt-4">
+            Discover how we bring contemporary service solutions tailored to
+            meet your needs.
+          </p>
+        </div>
+
         <Carousel
           opts={{
             align: "start",
@@ -60,9 +68,11 @@ export default function ServiceCorousel() {
           </div>
         </Carousel>
         <div className="flex justify-center mt-28">
-          <Button className="flex items-center gap-2">
+        <Button asChild className="flex items-center gap-2">
+          <Link href="/about" className="flex items-center gap-2">
             Learn More <ArrowRight className="w-4 h-4" />
-          </Button>
+          </Link>
+        </Button>
         </div>
       </div>
     </section>

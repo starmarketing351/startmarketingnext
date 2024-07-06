@@ -11,12 +11,19 @@ import { testimonials, ServiceInterface } from "@/public";
 import { FaQuoteLeft } from "react-icons/fa";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default function TestimonialsCarousel() {
   return (
     <section className="bg-gray-100 py-12">
       <div className="container mx-auto max-w-7xl px-4">
-        <h2 className="text-3xl font-bold text-center mb-12">Testimonials</h2>
+        <div className="text-center mb-8">
+          <h2 className="text-3xl font-bold">Testimonials</h2>
+          <p className="text-lg mt-2">
+            See what our clients have to say about us.
+          </p>
+        </div>
+
         <Carousel
           opts={{
             align: "start",
@@ -57,9 +64,11 @@ export default function TestimonialsCarousel() {
           </div>
         </Carousel>
         <div className="flex justify-center mt-28">
-          <Button className="flex items-center gap-2">
+        <Button asChild className="flex items-center gap-2">
+          <Link href="/about" className="flex items-center gap-2">
             Learn More <ArrowRight className="w-4 h-4" />
-          </Button>
+          </Link>
+        </Button>
         </div>
       </div>
     </section>

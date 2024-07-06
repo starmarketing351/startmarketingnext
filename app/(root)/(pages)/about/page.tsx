@@ -1,7 +1,7 @@
 "use client"
 
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import React, { useState, useCallback } from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
 import { ChevronDown, Star } from 'lucide-react';
 
 interface AboutUsContentItem {
@@ -54,28 +54,28 @@ const AboutUsContent: AboutUsContentItem[] = [
 const AboutUsSection: React.FC = () => {
   const [activeSection, setActiveSection] = useState<string | null>(null);
 
-  const toggleSection = (section: string) => {
-    setActiveSection(activeSection === section ? null : section);
-  };
+  const toggleSection = useCallback((section: string) => {
+    setActiveSection(prevSection => prevSection === section ? null : section);
+  }, []);
 
   return (
     <section className="bg-gradient-to-b from-blue-100 to-white py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.h1 
-          initial={{ opacity: 0, y: -50 }}
+          initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.3 }}
           className="text-5xl font-bold text-center text-blue-800 mb-12"
         >
           About Star Marketing
         </motion.h1>
 
-        {AboutUsContent.map((item, index) => (
+        {AboutUsContent.map((item) => (
           <motion.div 
             key={item.section}
-            initial={{ opacity: 0, y: 50 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: index * 0.1 }}
+            transition={{ duration: 0.3 }}
             className="mb-8 bg-white rounded-lg shadow-lg overflow-hidden"
           >
             <div 
@@ -83,32 +83,38 @@ const AboutUsSection: React.FC = () => {
               onClick={() => toggleSection(item.section)}
             >
               <h2 className="text-xl font-semibold text-gray-800">{item.title}</h2>
-              <ChevronDown 
-                className={`w-6 h-6 text-blue-500 transform transition-transform duration-300 ${activeSection === item.section ? 'rotate-180' : ''}`}
-              />
+              <motion.div
+                animate={{ rotate: activeSection === item.section ? 180 : 0 }}
+                transition={{ duration: 0.3 }}
+              >
+                <ChevronDown className="w-6 h-6 text-blue-500" />
+              </motion.div>
             </div>
             
-            {activeSection === item.section && (
-              <motion.div 
-                initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: 'auto' }}
-                exit={{ opacity: 0, height: 0 }}
-                transition={{ duration: 0.3 }}
-                className="px-6 pb-6"
-              >
-                {item.content && <p className="text-lg text-gray-700 mb-4">{item.content}</p>}
-                {item.points && (
-                  <ul className="space-y-2">
-                    {item.points.map((point, pointIndex) => (
-                      <li key={pointIndex} className="flex items-start">
-                        <Star className="w-5 h-5 text-yellow-400 mr-2 flex-shrink-0 mt-1" />
-                        <span className="text-gray-700">{point}</span>
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </motion.div>
-            )}
+            <AnimatePresence>
+              {activeSection === item.section && (
+                <motion.div 
+                  key={`content-${item.section}`}
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: 'auto' }}
+                  exit={{ opacity: 0, height: 0 }}
+                  transition={{ duration: 0.3 }}
+                  className="px-6 pb-6"
+                >
+                  {item.content && <p className="text-lg text-gray-700 mb-4">{item.content}</p>}
+                  {item.points && (
+                    <ul className="space-y-2">
+                      {item.points.map((point, pointIndex) => (
+                        <li key={pointIndex} className="flex items-start">
+                          <Star className="w-5 h-5 text-yellow-400 mr-2 flex-shrink-0 mt-1" />
+                          <span className="text-gray-700">{point}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </motion.div>
+              )}
+            </AnimatePresence>
           </motion.div>
         ))}
       </div>

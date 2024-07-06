@@ -38,7 +38,7 @@ const DesktopNavigationDropdown: React.FC<DesktopNavigationDropdownProps> = ({
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -10, transition: { duration: 1 } }}
       transition={{ duration: 0.3 }}
-      className="fixed top-[70px] left-0 w-full bg-white/20 backdrop-blur-md shadow-lg z-30"
+      className="fixed top-[70px] left-0 w-full bg-black/20 backdrop-blur-md shadow-lg z-30"
       onMouseEnter={() => setHovered(showDropdown)}
       onMouseLeave={() => setHovered(null)}
     >
