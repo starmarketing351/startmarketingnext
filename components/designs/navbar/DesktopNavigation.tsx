@@ -6,6 +6,7 @@ import {
   aboutNavigationInterface,
   servicesNavigation,
 } from "@/public";
+import Link from "next/link";
 
 interface DesktopNavigationDropdownProps {
   hovered: string | null;
@@ -70,30 +71,37 @@ const DesktopNavigationDropdown: React.FC<DesktopNavigationDropdownProps> = ({
           </div>
         )}
         {showDropdown === "about" && (
-          <div className="grid grid-cols-3 gap-8">
-            {aboutNavigation.map(
-              ({
-                description,
-                id,
-                label:Icon,
-                name,
-                path,
-              }: aboutNavigationInterface) => (
-                <div
-                  key={id}
-                  className="cursor-pointer hover:bg-blue-100/50 p-4 rounded-lg transition-shadow duration-200 shadow-sm hover:shadow-md"
-                  onClick={() => handleNavigation(path)}
-                >
-                  <div className="mb-4 w-full justify-center items-center flex">
-                    <Icon className="w-8 h-8 text-blue-500" />
+          <div className="flex flex-col">
+            <div className="grid grid-cols-3 gap-8">
+              {aboutNavigation.map(
+                ({
+                  description,
+                  id,
+                  label: Icon,
+                  name,
+                  path,
+                }: aboutNavigationInterface) => (
+                  <div
+                    key={id}
+                    className="cursor-pointer hover:bg-blue-100/50 p-4 rounded-lg transition-shadow duration-200 shadow-sm hover:shadow-md"
+                    onClick={() => handleNavigation(path)}
+                  >
+                    <div className="mb-4 w-full justify-center items-center flex">
+                      <Icon className="w-8 h-8 text-blue-500" />
+                    </div>
+                    <div className="flex items-center justify-center w-full flex-col">
+                      <h4 className="text-xl font-bold mb-2 textwhite">
+                        {name}
+                      </h4>
+                      <p className="text-gray-600">{description}</p>
+                    </div>
                   </div>
-                 <div className="flex items-center justify-center w-full flex-col">
-                 <h4 className="text-xl font-bold mb-2 textwhite">{name}</h4>
-                 <p className="text-gray-600">{description}</p>
-                 </div>
-                </div>
-              )
-            )}
+                )
+              )}
+            </div>
+            <div>
+              <Link href="/about">About Page</Link>
+            </div>
           </div>
         )}
       </div>

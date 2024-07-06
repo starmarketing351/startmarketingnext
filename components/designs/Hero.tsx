@@ -10,9 +10,9 @@ const Hero: React.FC = () => {
         <div className="absolute inset-0">
           <Image
             src={banner}
-          width={1200}
-          height={1200}
-          className="object-cover min-h-screen object-center w-screen "
+            width={1200}
+            height={1200}
+            className="object-cover min-h-screen object-center w-screen "
             alt="banner"
             priority
           />
