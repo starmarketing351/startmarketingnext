@@ -5,10 +5,9 @@ import Image from "next/image";
 import { EmblaOptionsType } from "embla-carousel";
 import useEmblaCarousel from "embla-carousel-react";
 import AutoScroll from "embla-carousel-auto-scroll";
-import LogoImage1 from "@/public/Logos/logoImage1.png";
-import LogoImage2 from "@/public/Logos/LogoImage2.png";
-import LogoImage3 from "@/public/Logos/LogoImage3.png";
+
 import { ArrowLeft, ArrowRight, Pause, Play } from "lucide-react";
+import { LogoImage1, LogoImage2, LogoImage3 } from "@/public";
 
 const logos = [
   LogoImage1,

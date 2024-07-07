@@ -89,6 +89,7 @@ import LogoImage2 from "./Logos/LogoImage2.png"
 import LogoImage3 from "./Logos/LogoImage3.png"
 
 import {
+
   FaCode,
   FaMobile,
   FaHashtag,
@@ -102,7 +103,9 @@ import {
 } from "react-icons/fa";
 
 export {
-  Logo,
+  LogoImage1,
+  LogoImage2,
+  LogoImage3,Logo,
   banner,
   client1,
   client2,
