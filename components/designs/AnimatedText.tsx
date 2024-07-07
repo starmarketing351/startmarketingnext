@@ -93,7 +93,7 @@ const HeroBannerNavigation = () => {
       >
         See Work
       </Link>
-      <Link
+      <Link      
         href="/contact"
         className="bg-white text-black px-6 py-3 rounded-full font-semibold hover:bg-transparent hover:text-white hover:border-white hover:border-2 transition duration-300 ease-in-out"
       >
