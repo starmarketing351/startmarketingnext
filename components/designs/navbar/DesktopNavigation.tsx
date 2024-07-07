@@ -47,23 +47,21 @@ const DesktopNavigationDropdown: React.FC<DesktopNavigationDropdownProps> = ({
           <div className="grid grid-cols-3 gap-8">
             {servicesNavigation.map(
               ({ id, image, path, title }: servicesNavigation) => (
-                <div
-                  key={id}
-                  className="flex items-start space-x-4 cursor-pointer hover:bg-blue-100/50 p-4 rounded-lg transition-shadow duration-200 shadow-sm hover:shadow-md"
-                  onClick={() => handleNavigation(path)}
-                >
-                  <Image
-                    src={image}
-                    alt={title}
-                    width={80}
-                    height={80}
-                    className="rounded-lg"
-                  />
-                  <div>
+                <div className="flex flex-col gap-y-2 hover:bg-blue-400/20 p-2 rounded-lg w-full items-center justify-center" key={id} onClick={() => handleNavigation(path)}>
+                  <div className=" bg-black/20 flex items-center justify-center rounded-full size-28">
+                    <Image
+                      src={image}
+                      alt={title}
+                      width={80}
+                      height={80}
+                      className="size-4/5 rounded-full"
+                    />
+                  </div>
+                  <div className="w-full text-center">
                     <h4 className="text-xl font-bold mb-2 text-white">
                       {title}
                     </h4>
-                    <p className="text-gray-600">{title}</p>
+                    <p className="text-white">{title}</p>
                   </div>
                 </div>
               )
@@ -100,7 +98,12 @@ const DesktopNavigationDropdown: React.FC<DesktopNavigationDropdownProps> = ({
               )}
             </div>
             <div className="w-full flex items-start justify-center mx-auto">
-              <Link className="max-w-32 bg-black flex items-center gap-x-2" href="/about">About Page</Link>
+              <Link
+                className="max-w-32 bg-black flex items-center gap-x-2"
+                href="/about"
+              >
+                About Page
+              </Link>
             </div>
           </div>
         )}

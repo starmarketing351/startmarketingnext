@@ -1,7 +1,6 @@
 import { banner } from "@/public";
 import Image from "next/image";
 import AnimatedTextSection from "@/components/designs/AnimatedText";
-import Navbar from "@/components/designs/navbar/Navbar";
 
 const Hero: React.FC = () => {
   return (
@@ -10,8 +9,8 @@ const Hero: React.FC = () => {
         <div className="absolute inset-0">
           <Image
             src={banner}
-            width={1200}
-            height={1200}
+            width={1000}
+            height={800}
             className="object-cover min-h-screen object-center w-screen "
             alt="banner"
             priority

@@ -58,9 +58,9 @@ const Partner: React.FC = () => {
                 <Image
                   src={partner.img}
                   alt={partner.title}
-                  layout="fill"
-                  objectFit="contain"
-                  className="filter grayscale hover:grayscale-0 transition-all duration-300"
+                 height={600}
+                 width={800}
+                  className="filter grayscale object-cover hover:grayscale-0 transition-all duration-300"
                 />
               </div>
               <h3 className="text-lg font-semibold text-gray-800">

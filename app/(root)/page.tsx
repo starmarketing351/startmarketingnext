@@ -2,6 +2,7 @@ import AwardSection from "@/components/designs/AwardSection";
 import Counter from "@/components/designs/Counter";
 import Hero from "@/components/designs/Hero";
 import IndustryExperienceCarousel from "@/components/designs/homecarousel/IndustryCorousel";
+import LogoCarousel from "@/components/designs/homecarousel/LogoCarousel";
 import ServiceCorousel from "@/components/designs/homecarousel/ServiceCarosel";
 import TestimonialsCarousel from "@/components/designs/homecarousel/TesimonialsCorousel";
 import Partner from "@/components/designs/Partner";
@@ -34,6 +35,9 @@ const page = () => {
       </section>
       <section>
         <TermsAndServiceSection />
+      </section>
+      <section id="Logos">
+        <LogoCarousel />
       </section>
     </section>
   );

@@ -1262,7 +1262,7 @@ export interface ProductPhotographyContentInterface {
 export const ProductPhotographyArray: ProductPhotographyContentInterface[] = [
   {
     section: "HeroSection",
-    title: "Star Product Photography",
+    title: "Product Photography",
     content:
       "Capture the essence of your products with our professional photography services.",
     image: ppbanner,

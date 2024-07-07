@@ -2,6 +2,9 @@ import React from "react";
 import {
   GraphicsDesignArray,
   GraphicsDesignContentInterface,
+  LogoPage1,
+  LogoPage2,
+  LogoPage3,
   servicedesign,
   services,
 } from "@/public";
@@ -15,13 +18,13 @@ const GraphicsDesignSection: React.FC = () => {
   return (
     <section className="bg-gray-50 py-12">
       <div className="container mx-auto max-w-7xl px-4">
-      <HeroBanner
-        imageSrc={services[3].image}
-        buttonText="Get Started"
-        heroHeading={services[3].title}
-        heroPara={services[3].description}
-        path="/contact"
-      />
+        <HeroBanner
+          imageSrc={services[3].image}
+          buttonText="Get Started"
+          heroHeading={services[3].title}
+          heroPara={services[3].description}
+          path="/contact"
+        />
         {GraphicsDesignArray.map(
           (item: GraphicsDesignContentInterface, index) => (
             <div key={index} className="mb-12">
@@ -53,13 +56,15 @@ const GraphicsDesignSection: React.FC = () => {
                       />
                     </div>
                   )}
-                  <div className="md:w-1/2">
+                  <div className="md:w-full items-center flex  flex-col justify-center">
                     {item.title && (
                       <h2 className="text-3xl font-bold mb-4">{item.title}</h2>
                     )}
-                    <p className="text-gray-700 mb-4">{item.content}</p>
+                    <p className="text-gray-700 text-center  mb-4">
+                      {item.content}
+                    </p>
                     {item.points && (
-                      <ul className="list-disc list-inside text-sm text-gray-600 mb-4">
+                      <ul className=" text-sm text-gray-600 mb-4">
                         {item.points.map((point, idx) => (
                           <li key={idx}>{point}</li>
                         ))}
@@ -72,6 +77,17 @@ const GraphicsDesignSection: React.FC = () => {
           )
         )}
       </div>
+      <section>
+        <div className="w-full h-auto flex justify-center py-4 border-2">
+          <Image src={LogoPage1} height={500} width={600} alt="Logo" />
+        </div>
+        <div className="w-full h-auto flex justify-center py-4 border-2">
+          <Image src={LogoPage3} height={500} width={600} alt="Logo" />
+        </div>
+        <div className="w-full h-auto flex justify-center py-4 border-2">
+          <Image src={LogoPage2} height={500} width={600} alt="Logo" />
+        </div>
+      </section>
     </section>
   );
 };

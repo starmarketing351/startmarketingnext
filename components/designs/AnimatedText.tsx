@@ -87,9 +87,12 @@ const AnimatedText: React.FC<AnimatedTextProps> = ({ services }) => {
 const HeroBannerNavigation = () => {
   return (
     <div className="mt-8 flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-      <button className="bg-transparent border-2 border-white text-white px-6 py-3 rounded-full font-semibold hover:bg-white hover:text-black transition duration-300 ease-in-out">
+      <Link
+        href="/#Logos"
+        className="bg-transparent border-2 border-white text-white px-6 py-3 rounded-full font-semibold hover:bg-white hover:text-black transition duration-300 ease-in-out"
+      >
         See Work
-      </button>
+      </Link>
       <Link
         href="/contact"
         className="bg-white text-black px-6 py-3 rounded-full font-semibold hover:bg-transparent hover:text-white hover:border-white hover:border-2 transition duration-300 ease-in-out"

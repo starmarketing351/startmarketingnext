@@ -18,7 +18,8 @@ const WebServiceCard: React.FC = () => {
           <Image
             src={webimage3}
             className="object-cover object-center min-h-full min-w-full"
-            layout="fill"
+          height={600}
+          width={800}
             alt="Service Header"
             priority
           />
