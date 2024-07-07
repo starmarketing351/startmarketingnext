@@ -2,10 +2,6 @@ import React from "react";
 import {
   GraphicsDesignArray,
   GraphicsDesignContentInterface,
-  LogoPage1,
-  LogoPage2,
-  LogoPage3,
-  servicedesign,
   services,
 } from "@/public";
 import Image from "next/image";
@@ -77,17 +73,6 @@ const GraphicsDesignSection: React.FC = () => {
           )
         )}
       </div>
-      <section>
-        <div className="w-full h-auto flex justify-center py-4 border-2">
-          <Image src={LogoPage1} height={500} width={600} alt="Logo" />
-        </div>
-        <div className="w-full h-auto flex justify-center py-4 border-2">
-          <Image src={LogoPage3} height={500} width={600} alt="Logo" />
-        </div>
-        <div className="w-full h-auto flex justify-center py-4 border-2">
-          <Image src={LogoPage2} height={500} width={600} alt="Logo" />
-        </div>
-      </section>
     </section>
   );
 };

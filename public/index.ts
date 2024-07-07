@@ -84,6 +84,9 @@ import productphoto1 from "./serviceillustartion/productsphography/productp1.jpg
 import productphoto2 from "./serviceillustartion/productsphography/productp2.jpg";
 import productphoto3 from "./serviceillustartion/productsphography/productp3.jpg";
 import productbanne from "./serviceillustartion/productsphography/digitalmarketing.png";
+import LogoImage1 from "./Logos/LogoImage1.png"
+import LogoImage2 from "./Logos/LogoImage2.png"
+import LogoImage3 from "./Logos/LogoImage3.png"
 
 import {
   FaCode,
