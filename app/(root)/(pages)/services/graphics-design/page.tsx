@@ -43,7 +43,7 @@ const GraphicsDesignSection: React.FC = () => {
                 <div className="bg-white p-6 rounded-lg shadow-lg flex flex-col md:flex-row">
                   {item.image && (
                     <div className="md:w-1/2 md:pr-6 mb-4 md:mb-0">
-                      <Image
+                      <Image        
                         src={item.image}
                         height={600}
                         width={600}
