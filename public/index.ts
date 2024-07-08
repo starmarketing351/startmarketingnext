@@ -30,8 +30,8 @@ import awardimage4 from "./awardsvg/shieldwithleaves.png";
 
 import indexp1 from "./indExp/indExp1.jpg";
 import indexp2 from "./indExp/indExp2.jpg";
-
-import indexp4 from "./indExp/IndExp5.jpg";
+import indExp3 from "./indExp/indExp7.jpg";
+import indexp4 from "./indExp/indExp4.jpg";
 import indexp5 from "./indExp/IndExp5.jpg";
 import indexp6 from "./indExp/indExp6.jpg";
 
@@ -136,12 +136,16 @@ export {
   servicephtography,
   servicesass,
   serviceweb,
+  indexp1,
+  indexp2,
+  indexp4,
+  indExp3,
+  indexp5,
+  indexp6,
 };
 
 // hero Banner Info
 // hero Banner Info
-
-
 
 // hero Banner Info
 // hero Banner Info
@@ -550,7 +554,7 @@ export const industryExperience: industryExperienceInterface[] = [
   },
   {
     id: 3,
-    image: indexp2,
+    image: indExp3,
     description:
       "Proven track record of delivering projects on time and within budget.",
     title: "Project Management",
