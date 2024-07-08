@@ -42,22 +42,35 @@ const DesktopNavigationDropdown: React.FC<DesktopNavigationDropdownProps> = ({
       onMouseEnter={() => setHovered(showDropdown)}
       onMouseLeave={() => setHovered(null)}
     >
-      <div className="max-w-7xl mx-auto py-8 px-4 min-h-[400px]">
-        {showDropdown === "services" && (
-          <div className="grid grid-cols-3 gap-8">
-            {servicesNavigation.map(
-              ({ id, image, path, title }: servicesNavigation) => (
-                <div className="h-20 flex items-center flex-row" key={id}>
-                  <div>
-                    <Image src={image} alt={title} height={100} width={100} />
+      <div className="h-fit py-10 grid grid-cols-3 items-center gap-6 max-w-7xl mx-auto justify-center">
+        {servicesNavigation.map(
+          ({ id, image, path, title }: servicesNavigation) => (
+            <Link href={path} key={id}>
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className=""
+              >
+                <div className="p-6 flex items-center bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg space-x-4">
+                  <div className="h-24 items-center flex justify-center">
+                    <Image
+                      src={image}
+                      alt={title}
+                      height={80}
+                      width={80}
+                      className="rounded-full"
+                    />
                   </div>
-                  <div>
-                    
+                  <div className="flex-1 min-w-0">
+                    <h2 className="text-lg font-semibold text-gray-900 truncate">
+                      {title}
+                    </h2>
+                    <p className="text-sm text-gray-500">Learn more →</p>
                   </div>
                 </div>
-              )
-            )}
-          </div>
+              </motion.div>
+            </Link>
+          )
         )}
       </div>
     </motion.div>
