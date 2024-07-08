@@ -32,8 +32,8 @@ import indExp1 from "./indExp/indExp1.jpg";
 import indExp2 from "./indExp/indExp2.jpg";
 import indExp3 from "./indExp/indExp7.jpg";
 import indExp4 from "./indExp/indExp4.jpg";
-import indExp5 from "./indExp/indExp5.jpg";
-import indExp6 from "./indExp/indExp6.jpg";
+import indExp5 from "./indExp/indExp6.jpg";
+import indExp6 from "./indExp/IndExp5.jpg";
 
 // Industry Experience Phtos
 // Industry Experience Phtos
@@ -143,6 +143,10 @@ export {
   indExp5,
   indExp6,
 };
+
+
+
+
 
 // hero Banner Info
 // hero Banner Info
