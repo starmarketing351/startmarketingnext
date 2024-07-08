@@ -47,28 +47,27 @@ const DesktopNavigationDropdown: React.FC<DesktopNavigationDropdownProps> = ({
           <div className="grid grid-cols-3 gap-8">
             {servicesNavigation.map(
               ({ id, image, path, title }: servicesNavigation) => (
-                <div className="flex flex-col gap-y-2 hover:bg-blue-400/20 p-2 rounded-lg w-full items-center justify-center" key={id} onClick={() => handleNavigation(path)}>
-                  <div className=" bg-black/20 flex items-center justify-center rounded-full size-28">
-                    <Image
-                      src={image}
-                      alt={title}
-                      width={80}
-                      height={80}
-                      className="size-4/5 rounded-full"
-                    />
+                <div className="h-20 flex items-center flex-row" key={id}>
+                  <div>
+                    <Image src={image} alt={title} height={100} width={100} />
                   </div>
-                  <div className="w-full text-center">
-                    <h4 className="text-xl font-bold mb-2 text-white">
-                      {title}
-                    </h4>
-                    <p className="text-white">{title}</p>
+                  <div>
+                    
                   </div>
                 </div>
               )
             )}
           </div>
         )}
-        {/* {showDropdown === "about" && (
+      </div>
+    </motion.div>
+  );
+};
+
+export default DesktopNavigationDropdown;
+
+{
+  /* {showDropdown === "about" && (
           <div className="flex flex-col">
             <div className="grid grid-cols-3 gap-8">
               {aboutNavigation.map(
@@ -106,10 +105,5 @@ const DesktopNavigationDropdown: React.FC<DesktopNavigationDropdownProps> = ({
               </Link>
             </div>
           </div>
-        )} */}
-      </div>
-    </motion.div>
-  );
-};
-
-export default DesktopNavigationDropdown;
+        )} */
+}
