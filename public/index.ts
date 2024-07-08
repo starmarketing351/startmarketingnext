@@ -28,12 +28,12 @@ import awardimage4 from "./awardsvg/shieldwithleaves.png";
 // Industry Experience Phtos
 // Industry Experience Phtos
 
-import indexp1 from "./indExp/indExp1.jpg";
-import indexp2 from "./indExp/indExp2.jpg";
+import indExp1 from "./indExp/indExp1.jpg";
+import indExp2 from "./indExp/indExp2.jpg";
 import indExp3 from "./indExp/indExp7.jpg";
-import indexp4 from "./indExp/indExp4.jpg";
-import indexp5 from "./indExp/IndExp5.jpg";
-import indexp6 from "./indExp/indExp6.jpg";
+import indExp4 from "./indExp/indExp4.jpg";
+import indExp5 from "./indExp/indExp5.jpg";
+import indExp6 from "./indExp/indExp6.jpg";
 
 // Industry Experience Phtos
 // Industry Experience Phtos
@@ -136,12 +136,12 @@ export {
   servicephtography,
   servicesass,
   serviceweb,
-  indexp1,
-  indexp2,
-  indexp4,
+  indExp1,
+  indExp2,
   indExp3,
-  indexp5,
-  indexp6,
+  indExp4,
+  indExp5,
+  indExp6,
 };
 
 // hero Banner Info
@@ -540,14 +540,14 @@ export interface industryExperienceInterface {
 export const industryExperience: industryExperienceInterface[] = [
   {
     id: 1,
-    image: indexp1,
+    image: indExp1,
     description:
       "Extensive teamwork and collaboration experience in diverse environments.",
     title: "Teamwork Skills",
   },
   {
     id: 2,
-    image: indexp2,
+    image: indExp2,
     description:
       "In-depth knowledge of industry-specific tools and technologies.",
     title: "Technical Expertise",
@@ -561,33 +561,27 @@ export const industryExperience: industryExperienceInterface[] = [
   },
   {
     id: 4,
-    image: indexp4,
+    image: indExp4,
     description:
       "Strong analytical skills with a focus on problem-solving and decision-making.",
     title: "Analytical Abilities",
   },
   {
     id: 5,
-    image: indexp5,
+    image: indExp5,
     description:
       "Effective communication skills for interacting with clients and stakeholders.",
     title: "Communication Skills",
   },
   {
     id: 6,
-    image: indexp6,
+    image: indExp5,
     description:
       "Adaptability to changing environments and continuous learning mindset.",
     title: "Adaptability",
   },
 ];
 
-import swhatsapp from "./serviceillustartion/sserviceicons/swhatsapp.jpg";
-import stwitter from "./serviceillustartion/sserviceicons/stwitter2.jpg";
-import slinkdin from "./serviceillustartion/sserviceicons/slinkdin.jpg";
-import sdicord from "./serviceillustartion/sserviceicons/sdiscord.jpg";
-import syoutube from "./serviceillustartion/sserviceicons/syoutube.jpg";
-import ssocial from "./serviceillustartion/sserviceicons/Social.jpg";
 import { IconType } from "react-icons";
 
 export interface aboutNavigationInterface {
