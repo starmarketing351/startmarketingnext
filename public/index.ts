@@ -1100,14 +1100,28 @@ const HeroBannerArray: HeroBannerItem[] = [
 
 import LogoDesigner from "./serviceillustartion/graphic/logoDesigner.webp";
 import Packaging from "./serviceillustartion/graphic/packgingdesign.jpg";
+
 import brandidentity from "./serviceillustartion/graphic/brandIdentity.jpg";
-export const GraphicsDesignArray: GraphicsDesignContentInterface[] = [
-  {
-    section: "HeroSection",
-    title: "Graphic Design",
-    content: "Your partner for creative graphics design solutions",
-    image: servicedesign,
-  },
+
+
+export interface GraphicsDesignContentInterface2 {
+  section: SectionNames;
+  title: string;
+  content?: string;
+  image?: StaticImageData;
+  points?: string[];
+}
+
+// Define the section names as a union type
+export type SectionNames =
+  | "LogoDesign"
+  | "PackagingDesign"
+  | "BrandIdentity"
+  | "WhyChooseUs"
+  | "HowWeWork";
+
+// Define the content array as an array of objects
+export const GraphicsDesignArray2: GraphicsDesignContentInterface2[] = [
   {
     section: "LogoDesign",
     title: "Logo Design",
@@ -1130,21 +1144,14 @@ export const GraphicsDesignArray: GraphicsDesignContentInterface[] = [
     image: brandidentity,
   },
   {
-    section: "Conclusion",
-    content:
-      "Looking to elevate your brand's visual identity? Our expert team at Star Marketing is here to make it happen!",
-    points: [
-      "Professional logo design",
-      "Stunning graphics for social media",
-      "Eye-catching marketing materials",
-      "Custom illustrations and artwork",
-    ],
-  },
-  {
     section: "WhyChooseUs",
     title: "Why Choose Us?",
     points: [
       "Years of experience in the industry",
+      "Professional logo design",
+      "Stunning graphics for social media",
+      "Eye-catching marketing materials",
+      "Custom illustrations and artwork",
       "Creative solutions tailored to your brand",
       "Fast turnaround times without compromising quality",
     ],

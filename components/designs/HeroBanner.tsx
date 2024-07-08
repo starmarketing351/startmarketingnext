@@ -3,7 +3,7 @@ import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 
 interface HeroBannerProps {
-  imageSrc: StaticImageData ;
+  imageSrc: StaticImageData;
   heroHeading: string | undefined;
   heroPara: string | undefined;
   buttonText: string;
@@ -21,11 +21,14 @@ const HeroBanner: React.FC<HeroBannerProps> = ({
     <div className="relative w-full h-[80vh] min-h-[600px] max-h-[800px] overflow-hidden">
       <div className="size-full">
         <Image
-          src={imageSrc}
-          height={800}
-          width={800}
-          className="object-cover object-center min-h-full min-w-full"
-          alt="Service Header"
+          src={imageSrc} // Replace with your actual banner image path
+          layout="fill"
+          objectFit="cover"
+          objectPosition="center"
+          alt="banner"
+          priority
+          placeholder="blur"
+          blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mN8/+F9PQAJLQNkx/P3ZQAAAABJRU5ErkJggg=="
         />
       </div>
       <div className="absolute inset-0 min-h-full min-w-full bg-black bg-opacity-60"></div>

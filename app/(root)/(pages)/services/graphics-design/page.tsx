@@ -1,19 +1,85 @@
 import React from "react";
 import {
-  GraphicsDesignArray,
-  GraphicsDesignContentInterface,
   services,
+  SectionNames,
+  GraphicsDesignContentInterface2,
+  GraphicsDesignArray2,
 } from "@/public";
-import Image from "next/image";
 import HeroBanner from "@/components/designs/HeroBanner";
+import Image from "next/image";
 
 const GraphicsDesignSection: React.FC = () => {
-  const introductionSection = GraphicsDesignArray.find(
-    (section) => section.title === "Graphic Design"
-  );
+  // Function to filter sections by section name
+  const filterSectionsByName = (
+    sectionName: SectionNames
+  ): GraphicsDesignContentInterface2[] => {
+    return GraphicsDesignArray2.filter((item) => item.section === sectionName);
+  };
+
+  // Component for sections with images
+  const ImageSection = ({
+    title,
+    image,
+    content,
+  }: GraphicsDesignContentInterface2) => {
+    return (
+      <div
+        key={title}
+        className="section bg-white rounded-lg shadow-md overflow-hidden"
+      >
+        {image && (
+          <div className="h-auto w-full p-3">
+            <Image
+              src={image}
+              alt={title}
+              className="object-cover rounded-md aspect-video object-center"
+              layout="responsive"
+              height={400}
+              width={400}
+            />
+          </div>
+        )}
+        <div className="p-6 md:p-8">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-2">
+            {title}
+          </h2>
+          {content && <p className="text-gray-600">{content}</p>}
+        </div>
+      </div>
+    );
+  };
+
+  // Component for sections with points
+  const PointsSection = ({
+    title,
+    points,
+  }: GraphicsDesignContentInterface2) => {
+    return (
+      <div
+        key={title}
+        className="section bg-gray-100 rounded-lg shadow-md overflow-hidden"
+      >
+        <div className="p-6 md:p-8">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-2">
+            {title}
+          </h2>
+          {points && (
+            <ul className="text-gray-600 list-disc list-inside">
+              {points.map((point, index) => (
+                <li key={index} className="mt-2">
+                  {point}
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
+      </div>
+    );
+  };
+
   return (
-    <section className="bg-gray-50 py-12">
-      <div className="container mx-auto max-w-7xl px-4">
+    <section className="bg-gray-50 min-h-screen pb-6 flex flex-col">
+      <div className=" py-12">
         <HeroBanner
           imageSrc={services[3].image}
           buttonText="Get Started"
@@ -21,57 +87,29 @@ const GraphicsDesignSection: React.FC = () => {
           heroPara={services[3].description}
           path="/contact"
         />
-        {GraphicsDesignArray.map(
-          (item: GraphicsDesignContentInterface, index) => (
-            <div key={index} className="mb-12">
-              {item.section === "HeroSection" && (
-                <div className="text-center mb-16">
-                  <h1 className="text-4xl font-bold mb-4">{item.title}</h1>
-                  <p className="text-lg text-gray-700 mb-6">{item.content}</p>
-                  {item.image && (
-                    <Image
-                      src={item.image}
-                      width={600}
-                      height={800}
-                      alt="home image"
-                      className="mx-auto w-full max-w-md rounded-lg shadow-lg"
-                    />
-                  )}
-                </div>
-              )}
-              {item.section !== "HeroSection" && (
-                <div className="bg-white p-6 rounded-lg shadow-lg flex flex-col md:flex-row">
-                  {item.image && (
-                    <div className="md:w-1/2 md:pr-6 mb-4 md:mb-0">
-                      <Image        
-                        src={item.image}
-                        height={600}
-                        width={600}
-                        alt="itemImages"
-                        className="w-full rounded-lg shadow-lg"
-                      />
-                    </div>
-                  )}
-                  <div className="md:w-full items-center flex  flex-col justify-center">
-                    {item.title && (
-                      <h2 className="text-3xl font-bold mb-4">{item.title}</h2>
-                    )}
-                    <p className="text-gray-700 text-center  mb-4">
-                      {item.content}
-                    </p>
-                    {item.points && (
-                      <ul className=" text-sm text-gray-600 mb-4">
-                        {item.points.map((point, idx) => (
-                          <li key={idx}>{point}</li>
-                        ))}
-                      </ul>
-                    )}
-                  </div>
-                </div>
-              )}
-            </div>
-          )
-        )}
+      </div>
+
+      {/* Sections with images */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+        {filterSectionsByName("LogoDesign").map((item) => (
+          <ImageSection key={item.title} {...item} />
+        ))}
+        {filterSectionsByName("PackagingDesign").map((item) => (
+          <ImageSection key={item.title} {...item} />
+        ))}
+        {filterSectionsByName("BrandIdentity").map((item) => (
+          <ImageSection key={item.title} {...item} />
+        ))}
+      </div>
+
+      {/* Sections with points */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 grid grid-cols-1 gap-8 md:grid-cols-2">
+        {filterSectionsByName("WhyChooseUs").map((item) => (
+          <PointsSection key={item.title} {...item} />
+        ))}
+        {filterSectionsByName("HowWeWork").map((item) => (
+          <PointsSection key={item.title} {...item} />
+        ))}
       </div>
     </section>
   );
