@@ -39,7 +39,7 @@ import indexp6 from "./indExp/indExp6.jpg";
 // Industry Experience Phtos
 // Industry Experience Phtos
 
-//  Parterns Images
+//  Parterns 
 //  Parterns Images
 
 import digitalocean from "./partners/DigitalOcean.png";
