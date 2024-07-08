@@ -1,6 +1,5 @@
 import React from "react";
-import Contact from "@/public/serviceillustartion/about/contactImage5.jpg";
-import Image from "next/image";
+import contactImgBanner from "@/public/indExp/indExp6.jpg"
 import {
   FaPhone,
   FaEnvelope,
@@ -70,7 +69,7 @@ const page = () => {
   return (
     <section className="bg-gray-100">
       <HeroBanner
-        imageSrc={Contact}
+        imageSrc={contactImgBanner}
         heroHeading="Contact Us"
         heroPara="React out to us for any inquiries or support We are here to help"
         buttonText="Visit Home"

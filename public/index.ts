@@ -29,16 +29,12 @@ import awardimage4 from "./awardsvg/shieldwithleaves.png";
 // Industry Experience Phtos
 
 import indexp1 from "./indExp/indExp1.jpg";
-import indexp2 from "./indExp/indExp7.jpg";
-import indexp3 from "./indExp/IndExp5.jpg";
-import indexp4 from "./indExp/indExp3.jpg";
-import indexp5 from "./indExp/indExp8.jpg";
-import indexp6 from "./indExp/IndExp5.jpg";
-import indexp7 from "./indExp/indExp6.jpg";
-import indexp8 from "./indExp/indExp9.jpg";
-import indexp9 from "./indExp/indExp10.jpg";
-import indexp10 from "./indExp/indExp11.jpg";
-import indexp11 from "./indExp/indExp12.jpg";
+import indexp2 from "./indExp/indExp2.jpg";
+import indexp3 from "./indExp/IndExp3.jpg";
+import indexp4 from "./indExp/IndExp5.jpg";
+import indexp5 from "./indExp/IndExp5.jpg";
+import indexp6 from "./indExp/indExp6.jpg";
+
 
 // Industry Experience Phtos
 // Industry Experience Phtos

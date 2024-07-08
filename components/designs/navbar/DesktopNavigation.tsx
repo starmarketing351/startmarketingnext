@@ -68,7 +68,7 @@ const DesktopNavigationDropdown: React.FC<DesktopNavigationDropdownProps> = ({
             )}
           </div>
         )}
-        {showDropdown === "about" && (
+        {/* {showDropdown === "about" && (
           <div className="flex flex-col">
             <div className="grid grid-cols-3 gap-8">
               {aboutNavigation.map(
@@ -106,7 +106,7 @@ const DesktopNavigationDropdown: React.FC<DesktopNavigationDropdownProps> = ({
               </Link>
             </div>
           </div>
-        )}
+        )} */}
       </div>
     </motion.div>
   );

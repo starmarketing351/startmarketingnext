@@ -44,16 +44,11 @@ const DesktopNavigation: React.FC<DesktopNavigationProps> = ({
         </button>
       </div>
 
-      <div
-        className="relative group"
-        onMouseEnter={() => setHovered("about")}
-        onMouseLeave={() => setHovered(null)}
-      >
-        <button className="flex items-center space-x-2 text-white">
+     
+        <Link href="/about" className="flex items-center space-x-2 text-white">
           <span>About</span>
-          <ChevronDownIcon className="w-4 h-4" />
-        </button>
-      </div>
+        </Link>
+   
 
       <button
         className="flex items-center space-x-2 text-white"
