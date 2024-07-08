@@ -78,8 +78,8 @@ const GraphicsDesignSection: React.FC = () => {
   };
 
   return (
-    <section className="bg-gray-50 min-h-screen pb-6 flex flex-col">
-      <div className=" py-12">
+    <section className="bg-gray-50 min-h-screen gap-y-6 pb-6 flex flex-col">
+      <div className="min-h-screen flex items-center">
         <HeroBanner
           imageSrc={services[3].image}
           buttonText="Get Started"
