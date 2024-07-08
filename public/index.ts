@@ -35,11 +35,10 @@ import indexp4 from "./indExp/IndExp5.jpg";
 import indexp5 from "./indExp/IndExp5.jpg";
 import indexp6 from "./indExp/indExp6.jpg";
 
-
 // Industry Experience Phtos
 // Industry Experience Phtos
 
-//  Parterns 
+//  Parterns
 //  Parterns Images
 
 import digitalocean from "./partners/DigitalOcean.png";
@@ -80,12 +79,11 @@ import productphoto1 from "./serviceillustartion/productsphography/productp1.jpg
 import productphoto2 from "./serviceillustartion/productsphography/productp2.jpg";
 import productphoto3 from "./serviceillustartion/productsphography/productp3.jpg";
 import productbanne from "./serviceillustartion/productsphography/digitalmarketing.png";
-import LogoImage1 from "./Logos/LogoImage1.png"
-import LogoImage2 from "./Logos/LogoImage2.png"
-import LogoImage3 from "./Logos/LogoImage3.png"
+import LogoImage1 from "./Logos/LogoImage1.png";
+import LogoImage2 from "./Logos/LogoImage2.png";
+import LogoImage3 from "./Logos/LogoImage3.png";
 
 import {
-
   FaCode,
   FaMobile,
   FaHashtag,
@@ -101,7 +99,8 @@ import {
 export {
   LogoImage1,
   LogoImage2,
-  LogoImage3,Logo,
+  LogoImage3,
+  Logo,
   banner,
   client1,
   client2,
@@ -142,36 +141,7 @@ export {
 // hero Banner Info
 // hero Banner Info
 
-export const bannerData = {
-  header: "Star Marketing ",
-  para: "We simplify the digital transformation journeys of businesses through smart and innovative software solutions.",
-  services: [
-    {
-      title: "Web Development",
-      icon: FaCode,
-    },
-    {
-      title: "App Development",
-      icon: FaMobile,
-    },
-    {
-      title: "Social Media Marketing",
-      icon: FaHashtag,
-    },
-    {
-      title: "Graphics Design",
-      icon: FaPaintBrush,
-    },
-    {
-      title: "Product Photography",
-      icon: FaCamera,
-    },
-    {
-      title: "SaaS Development",
-      icon: FaCloud,
-    },
-  ],
-};
+
 
 // hero Banner Info
 // hero Banner Info
